@@ -1,0 +1,172 @@
+---
+import '../style/main.scss';
+// import 'aos/dist/aos.css';
+import Header from '../components/global/Header.astro';
+import Footer from '../components/global/Footer.astro';
+import { getImage } from "astro:assets";
+import bgTexture from "../assets/home-hero-pattern.jpg";
+//const OpBgTexture = await getImage({src: bgTexture, format: 'webp', width: bgTexture.width / 2})
+const props = Astro.props;
+const data = {
+	header: {
+		vn: {
+			menu: [
+				{text: "Thông điệp Tổng Giám Đốc", url: "./messages", type: '',
+					items: []
+				},
+				{text: "Thông tin chung", url: "./general", type: '',
+					items: []
+				},
+				{text: "Phương pháp tiếp cận", url: "./approach", type: '',
+					items: []
+				},
+				{text: "Lĩnh vực trọng yếu", url: "./chap3", type: '',
+					items: [
+						{
+							text: "Phát thải khí nhà kính",
+							url: "./chap3"
+						},
+						{
+							text: "An toàn và chất lượng sản phẩm",
+							url: "./chap3"
+						},
+						{
+							text: "Điều kiện làm việc",
+							url: "./chap3"
+						},
+						{
+							text: "Kinh tế địa phương",
+							url: "./chap3"
+						},
+						{
+							text: "Dinh dưỡng đất",
+							url: "./chap3"
+						},
+						{
+							text: "Bảo tồn đa dạng sinh học",
+							url: "./chap3"
+						},
+						{
+							text: "Quản lý chất thải",
+							url: "./chap3"
+						},
+					]
+				},				
+			],
+			dl: {text: 'Tải báo cáo'}
+		},
+		en: {
+			menu: [
+				{text: "Thông điệp Tổng Giám Đốc", url: "./messages", type: '',
+					items: []
+				},
+				{text: "Thông tin chung", url: "./general", type: '',
+					items: []
+				},
+				{text: "Phương pháp tiếp cận", url: "./approach", type: '',
+					items: []
+				},
+				{text: "Lĩnh vực trọng yếu", url: "./chap3", type: '',
+					items: [
+						{
+							text: "Phát thải khí nhà kính",
+							url: "./chap3"
+						},
+						{
+							text: "An toàn và chất lượng sản phẩm",
+							url: "./chap3"
+						},
+						{
+							text: "Điều kiện làm việc",
+							url: "./chap3"
+						},
+						{
+							text: "Kinh tế địa phương",
+							url: "./chap3"
+						},
+						{
+							text: "Dinh dưỡng đất",
+							url: "./chap3"
+						},
+						{
+							text: "Bảo tồn đa dạng sinh học",
+							url: "./chap3"
+						},
+						{
+							text: "Quản lý chất thải",
+							url: "./chap3"
+						},
+					]
+				},				
+			],
+			dl: {text: 'Get full report'}
+		}
+	},
+	footer: {
+		vn: {
+			info: [
+				{
+					type: "tel", 
+					label_text: "Điện thoại",
+					url: "tel:(+84.28) 54 155 555",
+					body_text: "(+84.28) 54 155 555"
+				},
+				{
+					type: "head", 
+					label_text: "Trụ sở",
+					url: "https://maps.app.goo.gl/Uib4zMrHvZf1hWtbA",
+					body_text: "10 Tân Trào, Phường Tân Phú, Quận 7, TP Hồ Chí Minh"
+				},
+				{
+					type: "fax", 
+					label_text: "Fax",
+					url: "tel:(+84.28) 54 155 555",
+					body_text: "(+84.28) 54 155 555"
+				}
+			],
+			copy: {text: '@2023 Công ty Cổ phần sữa Việt Nam - All Rights Reserved'}
+		},
+		en: {
+			info: [
+				{
+					type: "tel", 
+					label_text: "Tel",
+					url: "tel:(+84.28) 54 155 555",
+					body_text: "(+84.28) 54 155 555"
+				},
+				{
+					type: "head", 
+					label_text: "Headquarter",
+					url: "https://maps.app.goo.gl/Uib4zMrHvZf1hWtbA",
+					body_text: "10 Tan Trao, Tan Phu Ward, District 7, Ho Chi Minh City, Vietnam"
+				},
+				{
+					type: "fax", 
+					label_text: "Fax",
+					url: "tel:(+84.28) 54 155 555",
+					body_text: "(+84.28) 54 155 555"
+				}
+			],
+			copy: {text: '@2023 Vietnam Dairy Products Joint Stock Company - All Rights Reserved'}
+		}
+	}
+}
+---
+<html lang={props.lang || 'vn'}>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="/favicon.ico" type="image/x-icon">
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{props.title}</title>
+        <link rel="stylesheet" href="../style/main.scss">
+	</head>
+	<body style={`--bg-txt: url()`} class="body">
+		<Header content={props.lang == 'en' ? data.header.en : data.header.vn} lang={props.lang || 'vn'}/>
+        <slot />
+		<Footer content={props.lang == 'en' ? data.footer.en : data.footer.vn} lang={props.lang || 'vn'}/>
+		
+		<script src="../js/main.js"></script>
+	</body>
+    
+</html>

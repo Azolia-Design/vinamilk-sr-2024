@@ -1,0 +1,300 @@
+@use './color.scss';
+@use './typo.scss';
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+section {
+    overflow: hidden;
+}
+a {
+    text-decoration: none;
+    display: inline-block;
+    color: inherit;
+}
+section {
+    z-index: 2;
+    position: relative;
+}
+button {
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    background-color: transparent;
+    color: inherit;
+    border: none;
+    cursor: pointer;
+}
+img {
+    width: 100%;
+    height: auto;
+    max-width: none;
+    display: block;
+    &.img-h {
+        height: 100%;
+        width: auto;
+    }
+    &.img-fit {
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+        &-bot {
+            object-position: 50% 100%;
+        }
+    }
+    &.img-fill {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        &-bot {
+            object-position: 50% 100%;
+        }
+    }
+}
+.ic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &-8 {
+        width: .8rem;
+        height: .8rem;
+    }
+    &-10 {
+        width: 1rem;
+        height: 1rem;
+    }
+    &-14 {
+        width: 1.4rem;
+        height: 1.4rem;
+    }
+    &-16 {
+        width: 1.6rem;
+        height: 1.6rem;
+    }
+    &-20 {
+        width: 2rem;
+        height: 2rem;
+    }
+    &-24 {
+        width: 2.4rem;
+        height: 2.4rem;
+    }
+    &-32 {
+        width: 3.2rem;
+        height: 3.2rem;
+    }
+}
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: .5rem;
+    background-color: var(--cl-bg);
+    color: var(--cl-blue);
+    transition: all 400ms ease;
+    &:hover {
+        background-color: var(--cl-blue);
+        color: var(--cl-bg);
+    }
+    // &-outline {
+    //     background-color: transparent;
+    //     border: solid max(.2rem, 2px) var(--cl-blue);
+    //     color: var(--cl-blue);
+    //     &:hover {
+    //         background-color: var(--cl-blue);
+    //         color: var(--cl-bg);
+    //     }
+    // }
+}
+.line {
+    width: 100%;
+    height: max(.1rem, 1px);
+    &-ver {
+        width: max(.1rem, 1px);
+        height: 100%;
+    }
+    &-dash {
+        --border-cl: var(--cl-blue);
+        --border-w: max(.2rem, 2px);
+        border-top: dashed var(--border-w) var(--border-cl);
+    }    
+}
+:root {
+    font-size: 0.6944444444444444vw;
+    @media screen and (min-width: 1440px) {
+        font-size: 10px;
+    }
+    @media screen and (max-width: 767px) {
+        font-size: 2.544529262086514vw;
+    }
+}
+html {
+    background-color: var(--cl-bg);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.container {
+    @media screen and (min-width: 1440px) {
+        max-width: 1440px;
+    }
+    --grid-gap: 1.6rem;
+    width: 100%;
+    margin: 0 auto;
+    padding-inline: 10rem;
+    &.grid {
+        display: grid;
+        grid-template-columns: repeat(24, 1fr);
+        column-gap: var(--grid-gap);
+    }
+    // @media screen and (max-width: 767px) {
+    //     --grid-gap: 1.2rem;
+    //     padding-inline: 1.6rem;
+    //     &.grid {
+    //         grid-template-columns: repeat(6, 1fr);
+    //     }
+    // }
+}
+.body {
+    &.lockscroll {
+        overflow: hidden;
+        height: 100vh;
+    }
+}
+.ex {
+    &-wrap {
+        position: relative;
+        display: grid;
+        margin-inline: -10rem;
+    }
+    &-content {
+        position: relative;
+        z-index: 2;
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    &-img {
+        position: relative;
+        z-index: 1;
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+}
+.heading {
+    font-family: 'vnm-sans';
+}
+.txt {
+    font-family: 'vnm-std';
+    font-weight: 400;
+    &-11 {
+        font-size: 1.1rem;
+    }
+    &-12 {
+        font-size: 1.2rem;
+    }
+    &-14 {
+        font-size: 1.4rem;
+    }
+    &-16 {
+        font-size: 1.6rem;
+        line-height: 1.8rem;
+    }
+    &-17 {
+        font-size: 1.7rem;
+        line-height: 2.4rem;
+    }
+    &-18 {
+        font-size: 1.8rem;
+    }
+    &-20 {
+        font-size: 2rem;
+    }
+    &-24 {
+        font-size: 2.4rem;
+    }
+    &-26 {
+        font-size: 2.6rem;
+    }
+    &-28 {
+        font-size: 2.8rem;
+    }
+    &-32 {
+        font-size: 3.2rem;
+    }
+    &-36 {
+        font-size: 3.6rem;
+    }
+    &-40 {
+        font-size: 4rem;
+    }
+    &-48 {
+        font-size: 4.8rem;
+    }
+    &-64 {
+        font-size: 6.4rem;
+        line-height: 7rem;
+    }
+    &-74 {
+        font-size: 7.4rem;
+        line-height: 1em;
+    }
+    &-78 {
+        font-size: 7.8rem;
+    }
+    &-82 {
+        font-size: 8.2rem;
+    }
+    &-96 {
+        font-size: 9.6rem;
+    }
+    &-128 {
+        font-size: 12.8rem;
+    }
+    &-145 {
+        font-size: 14.5rem;
+    }
+    &-162 {
+        font-size: 16.2rem;
+    }
+    &-206 {
+        font-size: 20.6rem;
+    }
+    &-260 {
+        font-size: 26rem;
+    }
+    &-up {
+        text-transform: uppercase;
+    }
+    &-blue {
+        color: var(--cl-blue);
+    }
+    &-white {
+        color: var(--cl-white);
+    }
+    &-med {
+        font-weight: 500;
+    }
+    &-bold {
+        font-weight: 700;
+    }
+    &-italic {
+        font-style: italic;
+    }
+    &-ari {
+        font-family: Arial, sans-serif;
+    }
+    &-inter {
+        font-family: 'Inter';
+    }
+}
+.h {
+    &-19 {
+        font-size: 1.9rem;
+    }
+    &-24 {
+        font-size: 2.4rem;
+    }
+    &-78 {
+        font-size: 7.8rem;
+    }
+}

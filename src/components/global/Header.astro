@@ -1,0 +1,149 @@
+---
+import { getRelativeLocaleUrl } from 'astro:i18n';
+import { Image } from "astro:assets";
+import logoImg from '../../assets/logo-img.png';
+import pdfFull_Vn from '../../../public/pdf/vn/Vinamilk BCTN 2023.pdf';
+import pdfFull_En from '../../../public/pdf/en/VINAMILK-ANNUAL-REPORT-2023.pdf';
+const {content, lang} = Astro.props;
+---
+<header class="header" data-lang={lang} data-aos="fade-down">
+    <div class="header-main">
+        <div class="container">
+            <div class="header-logo">
+                <a href={getRelativeLocaleUrl(lang, './')} class="header-logo-link">
+                    <Image src={logoImg} alt="" class="img-h"/>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="header-nav">
+        <div class="container">
+            <div class="header-menu left">
+                {content.menu.map((el, idx) => {
+                    if (idx == 0 || idx == 1) {
+                        return (
+                            <div class="header-menu-inner-item">
+                                <a href={getRelativeLocaleUrl(lang, el.url)} class={`header-menu-link txt-blue ${el.type == 'drop' ? 'type-drop' : ''}`}>
+                                    <span class="txt txt-16 header-menu-link-txt">
+                                        {el.text}
+                                    </span>
+                                </a>
+                            </div>
+                        )    
+                    }   
+                })}
+            </div>
+            <div class="header-menu right">
+                {content.menu.map((el, idx) => {
+                    if (idx == 2 || idx == 3) {
+                        return (
+                            <div class="header-menu-inner-item">
+                                <a href={getRelativeLocaleUrl(lang, el.url)} class={`header-menu-link txt-blue ${el.type == 'drop' ? 'type-drop' : ''}`}>
+                                    <span class="txt txt-16 header-menu-link-txt">
+                                        {el.text}
+                                    </span>
+                                </a>
+                            </div>
+                        )    
+                    }   
+                })}
+            </div>
+            <div class="header-lang">
+                <div class="header-lang-wrap">
+                    <a href={`${getRelativeLocaleUrl('vn', Astro.url.pathname.replace('/en/','/') )}`} class="ic ic-32 header-lang-toggle">
+                        {lang == 'vn' ? 
+                            <svg width="100%" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M24.4918 15.176V10.328C24.4918 9.88 24.8118 9.672 25.2598 9.672C25.7078 9.672 26.0118 9.88 26.0118 10.328V21.32C26.0118 21.944 25.6918 22.328 25.0518 22.328C24.3638 22.328 24.1078 22.056 23.7078 21.416L19.4678 14.552C18.8278 13.528 18.0278 11.96 17.6598 11.16C17.7558 12.184 17.8838 14.408 17.8838 16.76V21.672C17.8838 22.104 17.5638 22.328 17.1318 22.328C16.6838 22.328 16.3638 22.104 16.3638 21.672V10.632C16.3638 10.04 16.7478 9.672 17.3718 9.672C18.0918 9.672 18.3638 9.96 18.6678 10.44L22.6998 16.984C23.4358 18.184 24.3318 19.896 24.7478 20.792C24.6518 19.8 24.4918 17.48 24.4918 15.176Z" fill="#0213B0"/>
+                                <path d="M7.49228 16.392V20.328C7.49228 20.696 7.73228 20.84 8.08428 20.84H13.8123C14.2283 20.84 14.4523 21.128 14.4523 21.528C14.4523 21.912 14.2283 22.232 13.8123 22.232H7.62028C6.48428 22.232 5.98828 21.736 5.98828 20.52V11.496C5.98828 10.264 6.48428 9.76799 7.62028 9.76799H13.6683C14.0843 9.76799 14.3083 10.056 14.3083 10.456C14.3083 10.856 14.0843 11.16 13.6683 11.16H8.03628C7.65228 11.16 7.49228 11.336 7.49228 11.72V15.032H12.9483C13.3483 15.032 13.5723 15.32 13.5723 15.72C13.5723 16.088 13.3323 16.392 12.9483 16.392H7.49228Z" fill="#0213B0"/>
+                            </svg> :
+                            <svg width="100%" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21.4414 22.016V10.672C21.4414 10.224 21.7614 10.016 22.1934 10.016C22.6414 10.016 22.9774 10.224 22.9774 10.672V22.016C22.9774 22.448 22.6414 22.672 22.1934 22.672C21.7614 22.672 21.4414 22.448 21.4414 22.016Z" fill="#0213B0"/>
+                                <path d="M14.824 19.232L17.928 10.48C18.04 10.16 18.296 10.016 18.616 10.016C18.712 10.016 18.808 10.032 18.904 10.048C19.24 10.144 19.496 10.384 19.496 10.704C19.496 10.784 19.48 10.864 19.448 10.944L15.32 21.952C15.112 22.496 14.728 22.672 14.248 22.672C13.752 22.672 13.368 22.496 13.16 21.936L9.048 10.976C9.016 10.896 9 10.8 9 10.72C9 10.4 9.256 10.128 9.592 10.048C9.688 10.016 9.784 10 9.88 10C10.184 10 10.456 10.144 10.568 10.464L13.688 19.248C13.896 19.84 14.072 20.576 14.248 21.216C14.424 20.56 14.616 19.84 14.824 19.232Z" fill="#0213B0"/>
+                            </svg>
+                        }   
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<style lang="scss" is:global>
+    .header {
+        background-color: var(--cl-bg);
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 99;
+        width: 100%;
+        padding-block: 1.6rem;
+        border-bottom: solid 1px var(--cl-blue);
+        display: grid;
+        &-main, &-nav {
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+        .container {
+            padding-inline: 6rem;
+        }
+        &-main {
+            .container {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        &-logo {
+            &-link {
+                display: block;
+                height: 4rem;
+            }
+        }
+        &-nav {
+            .container {
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+        &-menu {
+            display: flex;
+            align-items: center;
+            column-gap: 3.2rem;
+            &.left {
+                margin-left: 1.5rem;
+            }
+            &.right {
+                margin-left: auto;
+                margin-right: 8.3rem;
+            }
+        }
+        &-lang {
+            display: flex;
+            align-items: center;
+        }
+    }
+</style>
+<script>
+    // if (window.innerWidth < 767) {
+    //     document.querySelector('.header-toggle-ic').addEventListener('click', function(e) {
+    //         e.preventDefault()
+    //         if (document.querySelector('.header-menu').classList.contains('active')) {
+    //             document.querySelector('.header-menu').classList.remove('active')
+    //             document.querySelector('.header-toggle-ic').classList.remove('active')
+    //             document.querySelector('.body').classList.remove('lockscroll')
+    //         } else {
+    //             document.querySelector('.header-menu').classList.add('active')
+    //             document.querySelector('.header-toggle-ic').classList.add('active')
+    //             document.querySelector('.body').classList.add('lockscroll')
+    //         }
+    //     })
+    //     document.querySelectorAll('.header-menu-link.type-drop').forEach((el, idx) => {
+    //         el.addEventListener('click', function(e) {
+    //             e.preventDefault();
+    //             el.closest('.header-menu-inner-item').classList.toggle('active')
+    //         })
+    //     })
+    // }
+</script>
+

@@ -1,0 +1,73 @@
+:root {
+    --cl-txt: #353535;
+    --cl-bg: #FFFFF1;
+    --cl-white: #ffffff;
+    --cl-blue: #0213B0;
+    --cl-blue-2: #3459FF;
+    --cl-blue-3: #38C0FF;
+    --cl-pink: #D5C2FA;
+    --cl-pink-3: #F2ABC4;
+    --cl-pink-sat: #FE2776;
+    --cl-pink-main: #85249E;
+    --cl-pink-rgb: #FE2776;
+    --cl-pink-3: #F2ABC4;
+    --cl-pink-real: #DC486B;
+    --cl-cyan: #0ADC91;
+    --cl-green: #1BBA33;
+    --cl-green-dark: #0B431E;
+    --cl-green-li: #8BC443;
+    --cl-yellow: #F2CC04;
+    --cl-yellow-2: #F1D6C0;
+    --cl-yellow-dark: #FB9702;
+    --cl-red-man: #6E0730;
+    --cl-purple-light: #D3E1FF;
+    --cl-brown-1: #422D1C;
+    --cl-brown-2: #9D6D46;
+    --cl-onion: #006D5A;
+}
+.bg-stripe {
+    --angle: -47deg;
+    --gap: 1.2rem;
+    --stroke: calc(1.2rem + .1rem);
+    --cl: rgba(255,255,241,.2);
+    background: repeating-linear-gradient(
+        var(--angle),
+        transparent,
+        transparent var(--gap),
+        var(--cl) var(--gap),
+        var(--cl) var(--stroke)
+    );
+}
+.line-decor {
+    background: var(--bg-txt);
+}
+.line-decor-css {
+    --angle: 180deg;
+    background: repeating-linear-gradient(
+        var(--angle),
+        var(--cl-blue),
+        var(--cl-blue) 25%,
+        var(--cl-blue-2) 25%,
+        var(--cl-blue-2) 50%
+    );
+}
+.cl-orange {
+    color: var(--cl-yellow-dark);
+}
+.cl-pink {
+    color: var(--cl-pink-sat);
+    &-bg {
+        background-color: var(--cl-pink-sat);
+    }
+}
+.cl-blue-2 {
+    color: var(--cl-blue-2);
+}
+[data-aos="anim-zoom-up"] {
+    transform: scale(0);
+    transform-origin: center bottom;
+  	transition-property: transform;
+}
+[data-aos="anim-zoom-up"].aos-animate {
+    transform: scale(1)
+}

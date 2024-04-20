@@ -1,0 +1,102 @@
+---
+import { Image } from "astro:assets";
+import stripe from '../../assets/stripe.svg';
+import homesum1 from '../../assets/homeSum1.svg';
+import homesum2 from '../../assets/homeSum2.svg';
+import homesum3 from '../../assets/homeSum3.svg';
+import homesum4 from '../../assets/homeSum4.svg';
+---
+<Image src={stripe} alt="" />
+<section class="home-sum">
+    <div class="container">
+        <div class="home-sum-content">
+            <div class="home-sum-item">
+                <div class="home-sum-img">
+                    <Image src={homesum1} alt="" />
+                </div>
+                <a href="" class="home-sum-btn">
+                    <span class="txt txt-14 txt-inter">Đọc tiếp</span>
+                    <div class="ic ic-24">
+                        <svg width="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </a>
+            </div>
+            <div class="home-sum-item">
+                <div class="home-sum-img">
+                    <Image src={homesum2} alt="" />
+                </div>
+                <a href="" class="home-sum-btn">
+                    <span class="txt txt-14 txt-inter">Đọc tiếp</span>
+                    <div class="ic ic-24">
+                        <svg width="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </a>
+            </div>
+            <div class="home-sum-item">
+                <div class="home-sum-img">
+                    <Image src={homesum3} alt="" />
+                </div>
+                <a href="" class="home-sum-btn">
+                    <span class="txt txt-14 txt-inter">Đọc tiếp</span>
+                    <div class="ic ic-24">
+                        <svg width="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </a>
+            </div>
+            <div class="home-sum-item">
+                <div class="home-sum-img">
+                    <Image src={homesum4} alt="" />
+                </div>
+                <a href="" class="home-sum-btn">
+                    <span class="txt txt-14 txt-inter">Đọc tiếp</span>
+                    <div class="ic ic-24">
+                        <svg width="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<style lang="scss">
+    .home-sum {
+        background-color: var(--cl-blue);
+        padding-block: 6.4rem 6.2rem;
+        &-content {
+            display: flex;
+            justify-content: space-between;
+        }
+        &-item {
+            padding-bottom: 1.2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            width: 23.4rem;
+        }
+        &-img {
+            width: 100%;
+        }
+        &-btn {
+            display: flex;
+            align-items: center;
+            margin-left: 2rem;
+            padding-block: .3rem;
+            padding-inline: .7rem;
+            color: var(--cl-bg);
+            column-gap: 1rem;
+            border-radius: .8rem;
+            border: solid max(.2rem, 2px) transparent;
+            transition: border-color 400ms ease;
+            &:hover {
+                border-color: var(--cl-bg);
+            }
+        }
+    }
+</style>
