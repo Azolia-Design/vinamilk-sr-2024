@@ -1,0 +1,18 @@
+---
+import { Image } from 'astro:assets';
+import Layout from "../layouts/Layout.astro";
+import GenHero from "../components/general/GenHero.astro";
+import GenJour from "../components/general/GenJour.astro";
+import GenRes from "../components/general/GenRes.astro";
+import GenAward from "../components/general/GenAward.astro";
+import stripeWide from '../assets/stripe-wide.svg'
+---
+<Layout title="Thông tin chung" hide_stripe={false}>
+	<GenHero />
+	<Image src={stripeWide} alt="" />
+	<GenJour />
+	<Image src={stripeWide} alt="" />
+	<GenRes />
+	<Image src={stripeWide} alt="" />
+	<GenAward />
+</Layout>

@@ -1,0 +1,33 @@
+---
+import { Image } from "astro:assets";
+import genAwardImg from '../../assets/genAwardImg.png';
+import genAwardContent from '../../assets/genAwardContent.svg?raw';
+---
+<section class="gen-award">
+    <div class="container">
+        <div class="ex-wrap">
+            <div class="ex-img">
+                <Image src={genAwardImg} alt="" />
+            </div>
+            <div class="ex-content">
+                <Fragment set:html={genAwardContent} />
+            </div>
+        </div>
+        <div class="nav-btn-wrap">
+            <a href="../approach" class="btn btn-blue btn-right">
+                <div class="txt txt-16 txt-med">Phương pháp tiếp cận</div>
+                <div class="ic ic-24">
+                    <svg width="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                            
+                </div>
+            </a>
+        </div>
+    </div>
+    
+</section>
+<style lang="scss">
+    .gen-award {
+        background-color: var(--cl-bg);
+    }
+</style>

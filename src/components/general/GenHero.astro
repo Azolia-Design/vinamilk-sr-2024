@@ -1,0 +1,23 @@
+---
+import { Image } from "astro:assets";
+import genHeroImg from '../../assets/genHeroImg.png';
+import genHeroContent from '../../assets/genHeroContent.svg';
+---
+<section class="gen-hero">
+    <div class="container">
+        <div class="ex-wrap">
+            <div class="ex-img">
+                <Image src={genHeroImg} alt="" />
+            </div>
+            <div class="ex-content">
+                <Image src={genHeroContent} alt="" />
+            </div>
+        </div>
+    </div>
+</section>
+<style lang="scss">
+    .gen-hero {
+        padding-top: 7.2rem;
+        height: 100vh;
+    }
+</style>

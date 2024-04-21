@@ -97,6 +97,15 @@ img {
         background-color: var(--cl-blue);
         color: var(--cl-bg);
     }
+    &-blue {
+        background-color: var(--cl-blue);
+        color: var(--cl-bg);
+        border: solid 1px var(--cl-blue);
+        &:hover {
+            background-color: transparent;
+            color: var(--cl-blue);
+        }
+    }
     // &-outline {
     //     background-color: transparent;
     //     border: solid max(.2rem, 2px) var(--cl-blue);
@@ -123,7 +132,7 @@ img {
 :root {
     font-size: 0.6944444444444444vw;
     @media screen and (min-width: 1440px) {
-        font-size: 10px;
+        //font-size: 10px;
     }
     @media screen and (max-width: 767px) {
         font-size: 2.544529262086514vw;
@@ -134,9 +143,19 @@ html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+.nav-btn-wrap {
+    display: flex;
+    justify-content: end;
+    padding-block: 5rem;
+    .btn {
+        padding-block: 1.6rem;
+        padding-inline: 4.8rem;
+        border-radius: 99rem;
+    }
+}
 .container {
     @media screen and (min-width: 1440px) {
-        max-width: 1440px;
+        //max-width: 1440px;
     }
     --grid-gap: 1.6rem;
     width: 100%;
@@ -172,6 +191,9 @@ html {
         z-index: 2;
         grid-column: 1/2;
         grid-row: 1/2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     &-img {
         position: relative;
@@ -233,6 +255,12 @@ html {
     &-64 {
         font-size: 6.4rem;
         line-height: 7rem;
+    }
+    &-68 {
+        font-size: 6.8rem;
+    }
+    &-72 {
+        font-size: 7.2rem;
     }
     &-74 {
         font-size: 7.4rem;
