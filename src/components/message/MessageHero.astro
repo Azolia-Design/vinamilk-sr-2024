@@ -5,18 +5,18 @@ import chap1Author from '../../assets/chap1Author.png';
 <section class="mess-hero">
     <div class="container grid">
         <div class="mess-hero-author">
-            <div class="img-wrap">
+            <div class="img-wrap" data-aos="fade-up">
                 <Image src={chap1Author} alt="" />
             </div>
-            <div class="heading txt-68 txt-bold title">
+            <div class="heading txt-68 txt-bold title" data-aos="fade-up" data-aos-delay="200">
                 Bà Mai Kiều Liên
             </div>
-            <div class="txt txt-28 txt-med sub">
+            <div class="txt txt-28 txt-med sub" data-aos="fade-up" data-aos-delay="300">
                 Tổng Giám Đốc
             </div>
         </div>
-        <div class="mess-hero-content">
-            <h1 class="heading txt-72 txt-bold title">
+        <div class="mess-hero-content" data-aos="fade-up">
+            <h1 class="heading txt-72 txt-bold title" >
                 THÔNG ĐIỆP TỔNG GIÁM ĐỐC
             </h1>
             <div class="richtext">
@@ -40,7 +40,7 @@ import chap1Author from '../../assets/chap1Author.png';
                 </p>
             </div>
         </div>
-        <div class="nav-btn-wrap">
+        <div class="nav-btn-wrap" data-aos="fade-up" data-aos-delay="200">
             <a href="../general" class="btn btn-blue btn-right">
                 <div class="txt txt-16 txt-med">Thông tin chung</div>
                 <div class="ic ic-24">
@@ -94,6 +94,14 @@ import chap1Author from '../../assets/chap1Author.png';
         .nav-btn-wrap {
             grid-column: 12/25;
             grid-row: 2/3;
+            display: flex;
+            justify-content: end;
+            padding-block: 5rem;
+            .btn {
+                padding-block: 1.6rem;
+                padding-inline: 4.8rem;
+                border-radius: 99rem;
+            }
         }
     }
 </style>

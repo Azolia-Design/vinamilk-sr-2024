@@ -2,17 +2,16 @@
 import { Image } from 'astro:assets';
 import Layout from "../layouts/Layout.astro";
 import AppHero from "../components/approach/AppHero.astro";
-import GenJour from "../components/general/GenJour.astro";
-import GenRes from "../components/general/GenRes.astro";
-import GenAward from "../components/general/GenAward.astro";
+import AppChart from "../components/approach/AppChart.astro";
+import AppCols from "../components/approach/AppCols.astro";
+import ChapNextBtn from "../components/ChapNextBtn.astro";
+
 import stripeWide from '../assets/stripe-wide.svg'
 ---
-<Layout title="Thông tin chung" hide_stripe={false}>
+<Layout title="Phương phát tiếp cận" hide_stripe={false}>
 	<AppHero />
 	<Image src={stripeWide} alt="" />
-	<GenJour />
-	<Image src={stripeWide} alt="" />
-	<GenRes />
-	<Image src={stripeWide} alt="" />
-	<GenAward />
+	<AppChart />
+	<AppCols />
+	<ChapNextBtn link={'../key-areas'} text="Lĩnh vực trọng yếu"/>
 </Layout>

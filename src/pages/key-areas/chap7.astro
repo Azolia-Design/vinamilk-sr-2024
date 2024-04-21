@@ -1,0 +1,14 @@
+---
+import { Image } from 'astro:assets';
+import Layout from "../../layouts/Layout.astro";
+import Chap7Hero from "../../components/chap7/Chap7Hero.astro";
+import Chap7Main from "../../components/chap7/Chap7Main.astro";
+import ChapNextBtn from "../../components/ChapNextBtn.astro";
+import stripeWideGr2 from '../../assets/stripe-wide-gr2.svg'
+---
+<Layout title="Quản lý chất thải" hide_stripe={false}>
+	<Chap7Hero />
+	<Image src={stripeWideGr2} alt="" />
+	<Chap7Main />
+    <ChapNextBtn link={'./chap8'} text="Nguồn nước và chất lượng nước"/>
+</Layout>

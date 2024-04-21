@@ -1,0 +1,14 @@
+---
+import { Image } from 'astro:assets';
+import Layout from "../../layouts/Layout.astro";
+import Chap5Hero from "../../components/chap5/Chap5Hero.astro";
+import Chap5Main from "../../components/chap5/Chap5Main.astro";
+import ChapNextBtn from "../../components/ChapNextBtn.astro";
+import stripeWide from '../../assets/stripe-wide.svg'
+---
+<Layout title="Đa dạng sinh học" hide_stripe={false}>
+	<Chap5Hero />
+	<Image src={stripeWide} alt="" />
+	<Chap5Main />
+    <ChapNextBtn link={'./chap6'} text="Đa dạng sinh học"/>
+</Layout>

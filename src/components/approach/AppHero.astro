@@ -1,22 +1,22 @@
 ---
 import { Image } from "astro:assets";
-import genHeroImg from '../../assets/genHeroImg.png';
-import genHeroContent from '../../assets/genHeroContent.svg';
+import appHeroImg from '../../assets/appHeroImg.png';
+import appHeroContent from '../../assets/appHeroContent.svg';
 ---
-<section class="gen-hero">
+<section class="app-hero">
     <div class="container">
         <div class="ex-wrap">
-            <div class="ex-img">
-                <Image src={genHeroImg} alt="" />
+            <div class="ex-img" data-aos="fade-up">
+                <Image src={appHeroImg} alt="" />
             </div>
-            <div class="ex-content">
-                <Image src={genHeroContent} alt="" />
+            <div class="ex-content" data-aos="fade-up" data-aos-delay="200">
+                <Image src={appHeroContent} alt="" />
             </div>
         </div>
     </div>
 </section>
 <style lang="scss">
-    .gen-hero {
+    .app-hero {
         padding-top: 7.2rem;
         
     }

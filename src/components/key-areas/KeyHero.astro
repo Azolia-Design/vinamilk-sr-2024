@@ -1,0 +1,92 @@
+---
+import { Image } from "astro:assets";
+import keyHeroImg from '../../assets/keyHeroImg.png';
+---
+<section class="key-hero">
+    <div class="container grid">
+        <div class="key-hero-content">
+            <div class="heading txt-80 txt-bold txt-up key-hero-title" data-aos="fade-up">
+                Lĩnh vực trọng yếu
+            </div>
+            <div class="list">
+                <div class="col" data-aos="fade-up" data-aos-delay="200">
+                    <a href="./chap1" class="txt txt-16 txt-link">
+                        <span>Phát thải khí nhà kính</span>
+                    </a>
+                    <a href="./chap2" class="txt txt-16 txt-link">
+                        <span>Sản phẩm an toàn và chất lượng</span>
+                    </a>
+                    <a href="./chap3" class="txt txt-16 txt-link">
+                        <span>Điều kiện làm việc và phát triển nguồn nhân lực</span>
+                    </a>
+                    <a href="./chap4" class="txt txt-16 txt-link">
+                        <span>Kinh tế địa phương</span>
+                    </a>
+                    <a href="./chap5" class="txt txt-16 txt-link">
+                        <span>Dinh dưỡng, chất lượng và lưu giữ đất</span>
+                    </a>
+                </div>
+                <div class="col" data-aos="fade-up" data-aos-delay="300">
+                    <a href="./chap6" class="txt txt-16 txt-link">
+                        <span>Đa dạng sinh học</span>
+                    </a>
+                    <a href="./chap7" class="txt txt-16 txt-link">
+                        <span>Quản lý chất thải</span>
+                    </a>
+                    <a href="./chap8" class="txt txt-16 txt-link">
+                        <span>Nguồn nước và chất lượng nước</span>
+                    </a>
+                    <a href="./chap9" class="txt txt-16 txt-link">
+                        <span>Phát triển thị trường</span>
+                    </a>
+                    <a href="./chap10" class="txt txt-16 txt-link">
+                        <span>Lan tỏa yêu thương vì một cộng đồng hạnh phúc</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="img-wrap" data-aos="fade-up">
+            <Image src={keyHeroImg} alt="" class="img-fill"/>
+        </div>
+    </div>
+    
+</section>
+<style lang="scss">
+    .key-hero {
+        padding-top: 7.2rem;
+        position: relative;
+        .container {
+            height: 100%;
+            position: relative;
+            z-index: 2;
+        }
+        &-content {
+            grid-column: 1/15;
+            padding-block: 5rem;   
+            color: var(--cl-blue);
+            position: relative;
+            z-index: 2;
+            margin-bottom: 40.2rem;
+        }
+        &-title {
+            line-height: 1.05em;
+            margin-bottom: 3.5rem;
+        }
+        .list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 5rem;
+            .col {
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                gap: 2.2rem;
+            }
+        }
+        .img-wrap {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+        }
+    }
+</style>
