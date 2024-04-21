@@ -1,0 +1,12 @@
+---
+import { Image } from 'astro:assets';
+import Layout from "../../layouts/Layout.astro";
+import Chap2Hero from "../../components/chap2/Chap2Hero.astro";
+import ChapNextBtnCenter from "../../components/ChapNextBtnCenter.astro";
+import stripeWide from '../../assets/stripe-wide.svg'
+---
+<Layout title="Sản phẩm an toàn và chất lượng" hide_stripe={true}>
+	<Chap2Hero />
+	<Image src={stripeWide} alt="" />
+    <ChapNextBtnCenter link={'./chap3'} text="Điều kiện làm việc và phát triển nguồn nhân lực"/>
+</Layout>

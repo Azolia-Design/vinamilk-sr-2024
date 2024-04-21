@@ -1,0 +1,14 @@
+---
+import { Image } from 'astro:assets';
+import Layout from "../../layouts/Layout.astro";
+import Chap10Hero from "../../components/chap10/Chap10Hero.astro";
+import Chap10Main from "../../components/chap10/Chap10Main.astro";
+import ChapNextBtn from "../../components/ChapNextBtn.astro";
+import stripeWidePink from '../../assets/stripe-wide-pink.svg'
+---
+<Layout title="Lan tỏa yêu thương vì một cộng đồng hạnh phúc" hide_stripe={false}>
+	<Chap10Hero />
+	<Image src={stripeWidePink} alt="" />
+	<!-- <Chap10Main /> -->
+    <ChapNextBtn link={'./chap10'} text="Lan tỏa yêu thương vì một cộng đồng hạnh phúc"/>
+</Layout>

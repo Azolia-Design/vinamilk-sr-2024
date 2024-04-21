@@ -1,0 +1,22 @@
+---
+import { Image } from "astro:assets";
+import chap6HeroImg from '../../assets/chap6HeroImg.png';
+import chap6HeroContent from '../../assets/chap6HeroContent.svg';
+---
+<section class="chap6-hero">
+    <div class="container">
+        <div class="ex-wrap">
+            <div class="ex-img" data-aos="fade-up">
+                <Image src={chap6HeroImg} alt="" />
+            </div>
+            <div class="ex-content" data-aos="fade-up" data-aos-delay="200">
+                <Image src={chap6HeroContent} alt="" />
+            </div>
+        </div>
+    </div>
+</section>
+<style lang="scss">
+    .chap6-hero {
+        padding-top: 7.2rem;
+    }
+</style>

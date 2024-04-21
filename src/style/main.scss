@@ -143,16 +143,6 @@ html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-.nav-btn-wrap {
-    display: flex;
-    justify-content: end;
-    padding-block: 5rem;
-    .btn {
-        padding-block: 1.6rem;
-        padding-inline: 4.8rem;
-        border-radius: 99rem;
-    }
-}
 .container {
     @media screen and (min-width: 1920px) {
         max-width: 1920px;
@@ -181,6 +171,10 @@ html {
     }
 }
 .ex {
+    &-add {
+        position: absolute;
+        z-index: 3;
+    }
     &-wrap {
         position: relative;
         display: grid;
@@ -268,6 +262,9 @@ html {
     }
     &-78 {
         font-size: 7.8rem;
+    }
+    &-80 {
+        font-size: 8rem;
     }
     &-82 {
         font-size: 8.2rem;

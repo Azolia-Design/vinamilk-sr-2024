@@ -1,0 +1,18 @@
+---
+import { Image } from "astro:assets";
+import appColsContent from '../../assets/appColsContent.svg?raw';
+---
+<section class="app-cols">
+    <div class="container">
+        <div class="ex-wrap">
+            <div class="ex-content" data-aos="fade-up">
+                <Fragment set:html={appColsContent} />
+            </div>
+        </div>
+    </div>
+</section>
+<style lang="scss">
+    .app-cols {
+        background-color: var(--cl-bg);
+    }
+</style>

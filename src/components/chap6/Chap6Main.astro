@@ -1,0 +1,22 @@
+---
+import { Image } from "astro:assets";
+import chap6MainImg from '../../assets/chap6MainImg.png';
+import chap6MainContent from '../../assets/chap6MainContent.svg';
+---
+<section class="chap6-main">
+    <div class="container">
+        <div class="ex-wrap">
+            <div class="ex-img" data-aos="fade-up">
+                <Image src={chap6MainImg} alt="" />
+            </div>
+            <div class="ex-content" data-aos="fade-up">
+                <Image src={chap6MainContent} alt="" />
+            </div>
+        </div>
+    </div>
+</section>
+<style lang="scss">
+    .chap6-main {
+        
+    }
+</style>

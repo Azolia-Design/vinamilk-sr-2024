@@ -1,0 +1,14 @@
+---
+import { Image } from 'astro:assets';
+import Layout from "../../layouts/Layout.astro";
+import Chap3Hero from "../../components/chap3/Chap3Hero.astro";
+import Chap3Main from "../../components/chap3/Chap3Main.astro";
+import ChapNextBtn from "../../components/ChapNextBtn.astro";
+import stripeWide from '../../assets/stripe-wide.svg'
+---
+<Layout title="Điền kiện làm việc" hide_stripe={false}>
+	<Chap3Hero />
+	<Image src={stripeWide} alt="" />
+	<Chap3Main />
+    <ChapNextBtn link={'./chap4'} text="Kinh tế địa phương"/>
+</Layout>

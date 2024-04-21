@@ -5,6 +5,7 @@ import GenHero from "../components/general/GenHero.astro";
 import GenJour from "../components/general/GenJour.astro";
 import GenRes from "../components/general/GenRes.astro";
 import GenAward from "../components/general/GenAward.astro";
+import ChapNextBtn from "../components/ChapNextBtn.astro";
 import stripeWide from '../assets/stripe-wide.svg'
 ---
 <Layout title="Thông tin chung" hide_stripe={false}>
@@ -15,4 +16,5 @@ import stripeWide from '../assets/stripe-wide.svg'
 	<GenRes />
 	<Image src={stripeWide} alt="" />
 	<GenAward />
+	<ChapNextBtn link={'../approach'} text="Phương pháp tiếp cận"/>
 </Layout>
