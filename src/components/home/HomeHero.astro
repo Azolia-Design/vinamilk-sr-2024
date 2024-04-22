@@ -1,25 +1,29 @@
 ---
 import { Image } from "astro:assets";
 import homeHeroBg from '../../assets/home-hero-bg.jpg';
+import homeHeroBgMb from '../../assets/mb-home-hero-bg.jpg';
 ---
 <section class="home-hero">
     <div class="container">
         <div class="home-hero-content">
             <h1 class="heading txt-145 txt-up txt-bold home-hero-title" data-aos="fade-up">
-                We care we do
+                Để tâm hành động
             </h1>
             <div class="txt txt-48 txt-med home-hero-sub" data-aos="fade-up" data-aos-delay="200">
                 Net Zero 2050
             </div>
-            <a href="#" class="btn home-hero-btn" data-aos="fade-up" data-aos-delay="300">
-                <span class="txt txt-16 txt-med">
-                    Báo cáo Phát triển Bền Vững 2023
-                </span>
-            </a>
+            <div class="home-hero-btn-wrap" data-aos="fade-up" data-aos-delay="300">
+                <a href="#" class="btn home-hero-btn">
+                    <span class="txt txt-16 txt-med">
+                        Báo cáo Phát triển Bền Vững 2023
+                    </span>
+                </a>    
+            </div>
         </div>
     </div>
     <div class="home-hero-img-wrap" data-aos="fade-up">
-        <Image src={homeHeroBg} loading="eager" alt="" class="img-fill"/>
+        <Image src={homeHeroBg} loading="eager" alt="" class="img-fill img-dk"/>
+        <Image src={homeHeroBgMb} loading="eager" alt="" class="img-fill img-mb"/>
     </div>
 </section>
 <style lang="scss">
@@ -40,29 +44,63 @@ import homeHeroBg from '../../assets/home-hero-bg.jpg';
             align-items: center;
             justify-content: center;
             text-align: center;
+            @media screen and (max-width: 767px) {
+                justify-content: start;
+                padding-bottom: 0;
+                padding-top: 6rem;
+            }
         }
         &-title {
             color: var(--cl-bg);
             line-height: 13.6rem;
             margin-bottom: 2rem;
+            @media screen and (max-width: 767px) {
+                font-size: 7.2rem;
+                line-height: 6.4rem;
+                margin-bottom: 1.4rem;
+                max-width: 24.7rem;
+            }
         }
         &-sub {
             color: var(--cl-onion);
             line-height: 3.2rem;
             margin-bottom: 2rem;
+            @media screen and (max-width: 767px) {
+                font-size: 3.2rem;
+                line-height: 2.2rem;
+                margin-bottom: 1.4rem;
+            }
         }
         &-btn {
             padding-block: 1.6rem;
             padding-inline: 4.8rem;
             border-radius: 99rem;
+            @media screen and (max-width: 767px) {
+                padding-block: 1.1rem;
+                padding-inline: 3.3rem;
+            }
             .txt {
                 line-height: 2.4rem;
+                @media screen and (max-width: 767px) {
+                    line-height: 1.7rem;
+                }
             }
         }
         &-img-wrap {
             position: absolute;
             inset: 0;
             z-index: 1;
+            .img-dk {
+                @media screen and (max-width: 767px) {
+                    display: none;
+                }
+            }
+            .img-mb {
+                display: none;
+                @media screen and (max-width: 767px) {
+                    display: block;
+                }
+            }
         }
     }
 </style>

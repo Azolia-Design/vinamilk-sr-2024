@@ -1,7 +1,9 @@
 ---
 import { Image } from "astro:assets";
-import chap1NetImg from '../../assets/chap1NetImg.png';
+import chap1NetImg from '../../assets/chap1NetImg_2.png';
 import chap1NetContent from '../../assets/chap1NetContent.svg?raw';
+import chap1NetAdd1 from '../../assets/chap1NetAdd1.svg';
+import chap1NetAdd2 from '../../assets/chap1NetAdd2.svg';
 ---
 <section class="chap1-net">
     <div class="container">
@@ -12,11 +14,31 @@ import chap1NetContent from '../../assets/chap1NetContent.svg?raw';
             <div class="ex-content" data-aos="fade-up">
                 <Fragment set:html={chap1NetContent} />
             </div>
+            <a href="https://www.vinamilk.com.vn/vi/tin-tuc-phat-trien-ben-vung/2533/tuyen-bo-giai-thich-du-dieu-kien-qes-nha-may-sua-nghe-an" target="_blank" class="ex-add1">
+                <Image src={chap1NetAdd1} alt="" />
+            </a>
+            <a href="https://www.vinamilk.com.vn/vi/tin-tuc-phat-trien-ben-vung/2532/tuyen-bo-giai-thich-du-dieu-kien-qes-trang-trai-bo-sua-nghe-an" target="_blank" class="ex-add2">
+                <Image src={chap1NetAdd2} alt="" />
+            </a>
         </div>
     </div>
 </section>
 <style lang="scss">
     .chap1-net {
         background-color: var(--cl-bg);
+        .ex-add1 {
+            width: 45.5rem;
+            position: absolute;
+            top: 64.63588767253689%;
+            left: 54.23611111111111%;
+            z-index: 3;
+        }
+        .ex-add2 {
+            width: 45.5rem;
+            position: absolute;
+            top: 73.25083293669681%;
+            left: 54.23611111111111%;
+            z-index: 3;
+        }
     }
 </style>

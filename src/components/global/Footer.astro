@@ -119,7 +119,7 @@ const {content, lang} = Astro.props;
             <div class="line"></div>
             <div class="grp-copy-left">
                 <div class="grp-copy-top">
-                    <div class="txt txt-14 txt-inter">Bản quyền thuộc về Vinamilk © 2023.</div>
+                    <div class="txt txt-14 txt-inter label">Bản quyền thuộc về Vinamilk © 2023.</div>
                     <a href="#" class="txt txt-12 txt-inter link">
                         Điều khoản sử dụng
                     </a>
@@ -147,8 +147,15 @@ const {content, lang} = Astro.props;
             padding-inline: 4rem;
             display: flex;
             justify-content: space-between;
+            @media screen and (max-width: 767px) {
+                padding-inline: 1.6rem;
+                flex-direction: column;
+            }
             &.top {
                 padding-block: 8.5rem 5.6rem;
+                @media screen and (max-width: 767px) {
+                    padding-block: 5.1rem 4.8rem;
+                }
             }
         }
         .grp {
@@ -159,9 +166,17 @@ const {content, lang} = Astro.props;
             row-gap: 2rem;
             &-main {
                 width: 26.6rem;
+                @media screen and (max-width: 767px) {
+                    width: 100%;
+                    align-items: center;
+                    margin-bottom: 6rem;
+                }
                 .ft-main-btn {
                     padding-block: 1.6rem;
                     padding-inline: 6.9rem;
+                    @media screen and (max-width: 767px) {
+                        padding-inline: 6.2rem;
+                    }
                     .span {
                         line-height: 2.4rem;
                     }
@@ -169,10 +184,18 @@ const {content, lang} = Astro.props;
                 .btn-dl-wrap {
                     display: flex;
                     column-gap: .8rem;
+                    @media screen and (max-width: 767px) {
+                        .btn-dl {
+                            width: 12.2rem;
+                        }
+                    }
                 }
                 .socials-wrap {
                     display: flex;
                     column-gap: 1.2rem;
+                    @media screen and (max-width: 767px) {
+                        column-gap: 2.3rem;
+                    }
                 }
             }
             &-row {
@@ -181,6 +204,10 @@ const {content, lang} = Astro.props;
                 justify-content: end;
                 color: var(--cl-bg);
                 column-gap: 2.4rem;
+                @media screen and (max-width: 767px) {
+                    flex-direction: column;
+                    row-gap: 2.8rem;
+                }
             }
             &-sub {
                 width: 21.9rem;
@@ -191,6 +218,11 @@ const {content, lang} = Astro.props;
                 row-gap: 0;
                 .label, .link {
                     line-height: 2rem;
+                }
+                .link {
+                    @media screen and (max-width: 767px) {
+                        font-size: 1.4rem;
+                    }
                 }
                 .label:not(:last-child) {
                     margin-bottom: 1.8rem;
@@ -206,6 +238,11 @@ const {content, lang} = Astro.props;
                 padding-block: 2rem 4rem;
                 position: relative;
                 align-items: center;
+                @media screen and (max-width: 767px) {
+                    padding-block: 2.4rem 3.2rem;
+                    align-items: start;
+                    row-gap: 2rem;
+                }
                 .line {
                     position: absolute;
                     top: 0;
@@ -213,20 +250,43 @@ const {content, lang} = Astro.props;
                     right: 4rem;
                     background-color: var(--cl-bg);
                     width: auto;
+                    @media screen and (max-width: 767px) {
+                        display: none;
+                    }
                 }
             }
             .grp-copy-top {
                 display: flex;
                 align-items: center;
                 column-gap: .4rem;
+                @media screen and (max-width: 767px) {
+                    display: grid;
+                    row-gap: .4rem;
+                    grid-template-columns: auto calc(1px + .4rem) 1fr;
+                    .label {
+                        grid-column: 1/4;
+
+                    }
+                }
                 .line-ver {
                     background-color: var(--cl-bg);
                     width: 1px;
                     height: 1.6rem;
                     margin-inline: .2rem;
+                    @media screen and (max-width: 767px) {
+
+                    }
                 }
                 .link {
                     text-decoration: underline;
+                }
+            }
+            .grp-copy-left {
+                @media screen and (max-width: 767px) {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                    row-gap: .8rem;
                 }
             }
             .grp-copy-right {

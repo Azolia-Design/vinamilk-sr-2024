@@ -69,9 +69,17 @@ import homesum4 from '../../assets/homeSum4.svg';
     .home-sum {
         background-color: var(--cl-blue);
         padding-block: 6.4rem 6.2rem;
+        @media screen and (max-width: 767px) {
+            padding-block: 6.2rem 5.2rem;
+        }
         &-content {
             display: flex;
             justify-content: space-between;
+            @media screen and (max-width: 767px) {
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                column-gap: 1.6rem;
+            }
         }
         &-item {
             padding-bottom: 1.2rem;
@@ -79,6 +87,9 @@ import homesum4 from '../../assets/homeSum4.svg';
             flex-direction: column;
             align-items: start;
             width: 23.4rem;
+            @media screen and (max-width: 767px) {
+                width: 100%;
+            }
         }
         &-img {
             width: 100%;
@@ -94,6 +105,17 @@ import homesum4 from '../../assets/homeSum4.svg';
             border-radius: .8rem;
             border: solid max(.2rem, 2px) transparent;
             transition: border-color 400ms ease;
+            @media screen and (max-width: 767px) {
+                padding-block: .2rem;
+                padding-inline: .5rem;
+                column-gap: .7rem;
+                border-radius: .6rem;
+                margin-left: 1.1rem;
+                .ic-24 {
+                    width: 1.6rem;
+                    height: 1.6rem;
+                }
+            }
             &:hover {
                 border-color: var(--cl-bg);
             }
