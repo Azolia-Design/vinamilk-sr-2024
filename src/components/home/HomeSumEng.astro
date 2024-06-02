@@ -1,0 +1,124 @@
+---
+import { Image } from "astro:assets";
+import stripe from '../../assets/stripe.svg';
+import homesum1Eng from '../../assets/homeSum1Eng.svg';
+import homesum2Eng from '../../assets/homeSum2Eng.svg';
+import homesum3Eng from '../../assets/homeSum3Eng.svg';
+import homesum4Eng from '../../assets/homeSum4Eng.svg';
+---
+<Image src={stripe} alt="" />
+<section class="home-sum">
+    <div class="container">
+        <div class="home-sum-content">
+            <div class="home-sum-item" data-aos="fade-up">
+                <div class="home-sum-img">
+                    <Image src={homesum1Eng} alt="" />
+                </div>
+                <a href="./messages.html" class="home-sum-btn">
+                    <span class="txt txt-14 txt-inter">Read more</span>
+                    <div class="ic ic-24">
+                        <svg width="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </a>
+            </div>
+            <div class="home-sum-item" data-aos="fade-up" data-aos-delay="200">
+                <div class="home-sum-img">
+                    <Image src={homesum2Eng} alt="" />
+                </div>
+                <a href="./general.html" class="home-sum-btn">
+                    <span class="txt txt-14 txt-inter">Read more</span>
+                    <div class="ic ic-24">
+                        <svg width="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </a>
+            </div>
+            <div class="home-sum-item" data-aos="fade-up" data-aos-delay="300">
+                <div class="home-sum-img">
+                    <Image src={homesum3Eng} alt="" />
+                </div>
+                <a href="./approach.html" class="home-sum-btn">
+                    <span class="txt txt-14 txt-inter">Read more</span>
+                    <div class="ic ic-24">
+                        <svg width="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </a>
+            </div>
+            <div class="home-sum-item" data-aos="fade-up" data-aos-delay="400">
+                <div class="home-sum-img">
+                    <Image src={homesum4Eng} alt="" />
+                </div>
+                <a href="./key-areas.html" class="home-sum-btn">
+                    <span class="txt txt-14 txt-inter">Read more</span>
+                    <div class="ic ic-24">
+                        <svg width="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<style lang="scss">
+    .home-sum {
+        background-color: var(--cl-blue);
+        padding-block: 6.4rem 6.2rem;
+        @media screen and (max-width: 767px) {
+            padding-block: 6.2rem 5.2rem;
+        }
+        &-content {
+            display: flex;
+            justify-content: space-between;
+            @media screen and (max-width: 767px) {
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                column-gap: 1.6rem;
+            }
+        }
+        &-item {
+            padding-bottom: 1.2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            width: 23.4rem;
+            @media screen and (max-width: 767px) {
+                width: 100%;
+            }
+        }
+        &-img {
+            width: 100%;
+        }
+        &-btn {
+            display: flex;
+            align-items: center;
+            margin-left: 2rem;
+            padding-block: .3rem;
+            padding-inline: .7rem;
+            color: var(--cl-bg);
+            column-gap: 1rem;
+            border-radius: .8rem;
+            border: solid max(.2rem, 2px) transparent;
+            transition: border-color 400ms ease;
+            @media screen and (max-width: 767px) {
+                padding-block: .2rem;
+                padding-inline: .5rem;
+                column-gap: .7rem;
+                border-radius: .6rem;
+                margin-left: 1.1rem;
+                .ic-24 {
+                    width: 1.6rem;
+                    height: 1.6rem;
+                }
+            }
+            &:hover {
+                border-color: var(--cl-bg);
+            }
+        }
+    }
+</style>

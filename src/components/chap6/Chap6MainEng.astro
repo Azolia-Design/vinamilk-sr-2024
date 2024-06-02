@@ -1,0 +1,24 @@
+---
+import { Image } from "astro:assets";
+import chap5MainImg from '../../assets/chap5MainImgEng.png';
+import chap5MainContentMB from '../../assets/chap5MainImgEngMB.png';
+---
+<section class="chap5-main">
+    <div class="container">
+        <div class="ex-wrap">
+            <div class="ex-img" data-aos="fade-up">
+                <Image src={chap5MainImg} alt="" />
+            </div>
+        </div>
+        <div class="ex-wrap ex-mb">
+            <div class="ex-img" data-aos="fade-up">
+                <Image src={chap5MainContentMB} alt="" />
+            </div>
+        </div>
+    </div>
+</section>
+<style lang="scss">
+    .chap5-main {
+        
+    }
+</style>

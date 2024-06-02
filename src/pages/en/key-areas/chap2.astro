@@ -1,0 +1,12 @@
+---
+import { Image } from 'astro:assets';
+import Layout from "../../../layouts/Layout.astro";
+import Chap2HeroEng from "../../../components/chap2/Chap2HeroEng.astro";
+import ChapNextBtnCenter from "../../../components/ChapNextBtnCenter.astro";
+import stripeWide from '../../../assets/stripe-wide.svg'
+---
+<Layout title="Product Safety And Quality" hide_stripe={true} lang="en">
+	<Chap2HeroEng />
+	<Image src={stripeWide} alt="" class='decor'/>
+    <ChapNextBtnCenter link={'./chap3.html'} text="Working Conditions And Human Resource Development"/>
+</Layout>

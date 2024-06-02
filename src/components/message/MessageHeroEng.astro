@@ -1,0 +1,179 @@
+---
+import { Image } from "astro:assets";
+import chap1Author from '../../assets/chap1Author.png';
+---
+<section class="mess-hero">
+    <div class="container grid">
+        <div class="mess-hero-author">
+            <h1 class="heading txt-72 txt-bold title mb" >
+                CEO's Message
+            </h1>
+            <div class="img-wrap" data-aos="fade-up">
+                <Image src={chap1Author} alt="" />
+            </div>
+            <div class="heading txt-68 txt-bold title" data-aos="fade-up" data-aos-delay="200">
+                Ms. Mai Kieu Lien
+            </div>
+            <div class="txt txt-28 txt-med sub" data-aos="fade-up" data-aos-delay="300">
+                Chief Executive Officer
+            </div>
+            <div class="txt txt-20 sub-sub" data-aos="fade-up" data-aos-delay="300">
+                Vietnam Dairy Products Joint Stock Company
+            </div>
+        </div>
+        <div class="mess-hero-content" data-aos="fade-up">
+            <h1 class="heading txt-72 txt-bold title dk" >
+                CEO's Message
+            </h1>
+            <div class="richtext">
+                <p class="txt txt-16 txt-inter">
+                    Vinamilk's sustainable development journey witnessed a new height in 2023, as we successfully deepened and expanded our commitment and actions toward sustainable development while defending our position as the leading dairy producer. These were accomplished by repositioning the brand and implementing the mission of enhancing home quality of life through the provision of superior food products. Vinamilk is currently the most sustainable brand in Vietnam and among top 5 globally in the dairy industry (according to Brand Finance). Recognizing the threats posed by climate change and natural resource depletion, we have set specific goals and actions to minimize the environmental and social impacts of our value chain activities.
+                </p>
+                <p class="txt txt-16 txt-inter">
+                    <span class="txt-bold txt-blue">Firstly</span>, we publicly declared our pledge to Pathways to Dairy Net Zero, becoming the first Vietnam-based entity to join this global initiative. The year 2023 was more memorable when Vinamilk became the first dairy company in Vietnam to obtain a carbon-neutrality certification for its Nghe An Dairy Factory and Nghe An Dairy Farm. Another significant highlight in Vinamilk's sustainable development journey in 2023 was the announcement of short-term and long-term targets towards the Vinamilk Pathways to Dairy Net Zero 2050. Our primary focus is on utilizing renewable energy and minimizing greenhouse gas emissions throughout production. We conduct greenhouse gas accounting for 100% of our factories and farms according to ISO 14064 standards. We activate solar energy projects and adopt energy-saving technologies. We prioritize extensive research and innovation to develop products with lower carbon footprints. We also actively engage in afforestation and collaborate on forest regeneration projects. One exemplary project is Vinamilk's Net Zero afforestation initiative. This not only benefits the environment by absorbing carbon, providing oxy, and reducing ambient temperature but also contributes to creating a sustainable value chain in our business operations.
+                </p>
+                <p class="txt txt-16 txt-inter">
+                    <span class="txt-bold txt-blue">Secondly</span>, as 100% of Vinamilk's farms are certified with GlobalG.A.P. standards, we emphasize on developing sustainable agriculture across all Vinamilk farms. These farms not only cultivate high-quality milk sources but also demonstrate Vinamilk's commitment to environmental sustainability, soil quality, animal welfare, and biodiversity. We share values and support farmers by ensuring the purchase of all fresh milk at consistent and competitive pricing through clear and transparent contracts. Every farmer involved in the Vinamilk supply chain receives guidance and technical knowledge on animal management from breeding to output, in order to increase productivity, quality, and profitability. This approach also ensures that economic development is aligned with environmental conservation.
+                </p>
+                <p class="txt txt-16 txt-inter">
+                    <span class="txt-bold txt-blue">Thirdly</span>, we prioritize waste management and recycling. We constantly implement various activities to transition to a circular economy, including efforts to investigate the conversion of waste into valuable resources. Additionally, we utilize eco-friendly raw materials throughout production to minimize our impacts on natural resources.
+                </p>
+                <p class="txt txt-16 txt-inter">
+                    <span class="txt-bold txt-blue">Finally</span>, we put our heart and soul into our implementation of social responsibilities. Wherever Vinamilk operates, we not only create jobs, improve the quality of the labor force, and develop local economies but also implement various education and community support programs to enhance awareness of nutrition, and sustainable development, and improve the lives of everyone, particularly those facing challenging circumstances. One of the prominent programs that Vinamilk has persistently maintained is the "Stand Tall Vietnam Milk Fund". This initiative has been ongoing for 16 years to ensure every child has the opportunity to drink milk every day. These programs not only contribute to the development of the younger generation but also exemplify Vinamilk's dedication to building a sustainable society for the future.
+                </p>
+                <p class="txt txt-16 txt-inter">
+                    All these convey a clear message: We truly care, and We act decisively towards a prosperous future. We recognize that sustainable development is a continuous process that requires a great deal of effort and dedication. Therefore, we invite cooperation and support from all stakeholders, including suppliers, partners, customers, and the community. Only by working together can we create a sustainable future for ourselves and for future generations.
+                </p>
+                <p class="txt txt-16 txt-inter">
+                    May your journey be full of good health and prosperity. <br/>
+                    <em>
+                        Ho Chi Minh City, April 23, 2024.
+                    </em>
+                </p>
+            </div>
+        </div>
+        <div class="nav-btn-wrap" data-aos="fade-up" data-aos-delay="200">
+            <a href="./general.html" class="btn btn-blue btn-right">
+                <div class="txt txt-16 txt-med">General information</div>
+                <div class="ic ic-24">
+                    <svg width="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                            
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+<style lang="scss">
+    .mess-hero {
+        @media screen and (max-width: 767px) {
+            .container {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+        .title.mb {
+            display: none;
+            @media screen and (max-width: 767px) {
+                display: block;
+                max-width: 30.2rem;
+                margin-bottom: 5.2rem;
+                font-size: 6.4rem;
+                line-height: 1.05em;
+            }
+        }
+        .title.dk {
+            @media screen and (max-width: 767px) {
+                display: none;
+            }
+        }
+        &-author {
+            padding-block: 21.8rem 7rem;
+            grid-column: 1/11;
+            grid-row: 1/3;
+            max-width: 49.8rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: var(--cl-blue);
+            text-align: center;
+            @media screen and (max-width: 767px) {
+                padding-block: 13.8rem 5.2rem;
+                max-width: none;
+            }
+            .title:not(.mb) {
+                @media screen and (max-width: 767px) {
+                    font-size: 3.2rem;
+                }
+            }
+            .sub {
+                @media screen and (max-width: 767px) {
+                    font-size: 2rem;
+                }
+            }
+            .img-wrap {
+                margin-bottom: 2.2rem;
+                @media screen and (max-width: 767px) {
+                    max-width: 25.3rem;
+                    margin-bottom: 3rem;
+                }
+            }
+        }
+        &-content {
+            padding-block: 17rem 0;
+            grid-column: 12/24;
+            grid-row: 1/2;
+            margin-left: 2.7rem;
+            border-bottom: solid 1px blue;
+            @media screen and (max-width: 767px) {
+                padding-block: 0;
+                margin-left: 0;
+                border-bottom: none;
+            }
+            .title {
+                color: var(--cl-blue);
+                margin-bottom: .6rem;
+                line-height: 10.5rem;
+            }
+            .richtext {
+                display: flex;
+                flex-direction: column;
+                row-gap: 2.2rem;
+                height: 48.8rem;
+                overflow-y: auto;
+                padding-bottom: 2rem;
+                @media screen and (max-width: 767px) {
+                    height: auto;
+                    overflow: visible;
+                }
+                .scripted {
+                    vertical-align: sub;
+                    font-size: 1.2rem;
+                }
+                p {
+                    line-height: 1.4em;
+                }
+                em {
+                    font-size: 1.4rem;
+                    line-height: auto;
+                }
+            }
+        }
+        .nav-btn-wrap {
+            grid-column: 12/25;
+            grid-row: 2/3;
+            display: flex;
+            justify-content: end;
+            padding-block: 5rem;
+            @media screen and (max-width: 767px) {
+                justify-content: center;
+                padding-block: 7.2rem 3.4rem;
+            }
+            .btn {
+                padding-block: 1.6rem;
+                padding-inline: 4.8rem;
+                border-radius: 99rem;
+            }
+        }
+    }
+</style>

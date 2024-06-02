@@ -10,36 +10,39 @@ import keyHeroImg from '../../assets/keyHeroImg.png';
             </div>
             <div class="list">
                 <div class="col" data-aos="fade-up" data-aos-delay="200">
-                    <a href="./key-areas/chap1" class="txt txt-16 txt-link">
+                    <a href="./key-areas/chap1.html" class="txt txt-16 txt-link">
                         <span>Phát thải khí nhà kính</span>
                     </a>
-                    <a href="./key-areas/chap2" class="txt txt-16 txt-link">
+                    <a href="./key-areas/chap2.html" class="txt txt-16 txt-link">
                         <span>Sản phẩm an toàn và chất lượng</span>
                     </a>
-                    <a href="./key-areas/chap3" class="txt txt-16 txt-link">
+                    <a href="./key-areas/chap3.html" class="txt txt-16 txt-link">
                         <span>Điều kiện làm việc và phát triển nguồn nhân lực</span>
                     </a>
-                    <a href="./key-areas/chap4" class="txt txt-16 txt-link">
+                    <a href="./key-areas/chap4.html" class="txt txt-16 txt-link">
                         <span>Kinh tế địa phương</span>
                     </a>
-                    <a href="./key-areas/chap5" class="txt txt-16 txt-link">
+                    <a href="./key-areas/chap5.html" class="txt txt-16 txt-link">
+                        <span>Phúc Lợi Động Vật</span>
+                    </a>
+                    <a href="./key-areas/chap6.html" class="txt txt-16 txt-link">
                         <span>Dinh dưỡng, chất lượng và lưu giữ đất</span>
                     </a>
                 </div>
                 <div class="col" data-aos="fade-up" data-aos-delay="300">
-                    <a href="./key-areas/chap6" class="txt txt-16 txt-link">
-                        <span>Đa dạng sinh học</span>
+                    <a href="./key-areas/chap7.html" class="txt txt-16 txt-link">
+                        <span>Bảo Tồn Đa Dạng Sinh Học - Nền Tảng Cho Nông Nghiệp Bền Vững</span>
                     </a>
-                    <a href="./key-areas/chap7" class="txt txt-16 txt-link">
+                    <a href="./key-areas/chap8.html" class="txt txt-16 txt-link">
                         <span>Quản lý chất thải</span>
                     </a>
-                    <a href="./key-areas/chap8" class="txt txt-16 txt-link">
+                    <a href="./key-areas/chap9.html" class="txt txt-16 txt-link">
                         <span>Nguồn nước và chất lượng nước</span>
                     </a>
-                    <a href="./key-areas/chap9" class="txt txt-16 txt-link">
+                    <a href="./key-areas/chap10.html" class="txt txt-16 txt-link">
                         <span>Phát triển thị trường</span>
                     </a>
-                    <a href="./key-areas/chap10" class="txt txt-16 txt-link">
+                    <a href="./key-areas/chap11.html" class="txt txt-16 txt-link">
                         <span>Lan tỏa yêu thương vì một cộng đồng hạnh phúc</span>
                     </a>
                 </div>
@@ -67,15 +70,34 @@ import keyHeroImg from '../../assets/keyHeroImg.png';
             position: relative;
             z-index: 2;
             margin-bottom: 40.2rem;
+            @media screen and (max-width: 767px) {
+                grid-column: 1/-1;
+                padding-block: 4.5rem 17rem;
+                margin-bottom: 0;
+            }
         }
         &-title {
             line-height: 1.05em;
             margin-bottom: 3.5rem;
+            @media screen and (max-width: 767px) {
+                font-size: 6.4rem;
+                text-align: center;
+                margin-bottom: 3.2rem;
+                text-transform: none;
+                max-width: 26rem;
+                margin-inline: auto;
+            }
         }
         .list {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             column-gap: 5rem;
+            @media screen and (max-width: 767px) {
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                row-gap: 2.2rem;
+            }
             .col {
                 display: flex;
                 flex-direction: column;
@@ -87,6 +109,11 @@ import keyHeroImg from '../../assets/keyHeroImg.png';
             position: absolute;
             inset: 0;
             z-index: 1;
+            @media screen and (max-width: 767px) {
+                top: auto;
+                right: 0;
+
+            }
         }
     }
 </style>

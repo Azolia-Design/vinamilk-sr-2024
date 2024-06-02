@@ -1,0 +1,24 @@
+---
+import { Image } from "astro:assets";
+import appChartContent from '../../assets/appChartContentEng.svg?raw';
+import appChartContentMB from '../../assets/appChartContentEngMB.svg';
+---
+<section class="app-chart">
+    <div class="container">
+        <div class="ex-wrap">
+            <div class="ex-content">
+                <Fragment set:html={appChartContent} />
+            </div>
+        </div>
+        <div class="ex-wrap ex-mb">
+            <div class="ex-content" data-aos="fade-up">
+                <Image src={appChartContentMB} alt="" />
+            </div>
+        </div>
+    </div>
+</section>
+<style lang="scss">
+    .app-chart {
+        background-color: var(--cl-bg);
+    }
+</style>

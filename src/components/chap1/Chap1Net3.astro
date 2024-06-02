@@ -2,15 +2,18 @@
 import { Image } from "astro:assets";
 import chap1NetImg3 from '../../assets/chap1NetImg3.png';
 import chap1NetContent3 from '../../assets/chap1NetContent3.svg?raw';
+import chap1NetContent3MB from '../../assets/chap1NetContent3MB.svg';
 ---
 <section class="chap1-net-2">
     <div class="container">
         <div class="ex-wrap">
-            <div class="ex-img" data-aos="fade-up">
-                <Image src={chap1NetImg3} alt="" />
-            </div>
-            <div class="ex-content" data-aos="fade-up">
+            <div class="ex-content">
                 <Fragment set:html={chap1NetContent3} />
+            </div>
+        </div>
+        <div class="ex-wrap ex-mb">
+            <div class="ex-img" data-aos="fade-up">
+                <Image src={chap1NetContent3MB} alt="" />
             </div>
         </div>
     </div>

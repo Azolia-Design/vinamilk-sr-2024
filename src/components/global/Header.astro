@@ -17,14 +17,13 @@ const {content, lang} = Astro.props;
                         <path d="M6.25 20.25H25.75" stroke="#0213B0" stroke-width="1.5"/>
                     </svg>
                     <svg width="100%" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="ic-close">
-                        <path d="M6.25 10.25H25.75" stroke="#0213B0" stroke-width="1.5"/>
-                        <path d="M6.25 15.25H25.75" stroke="#0213B0" stroke-width="1.5"/>
-                        <path d="M6.25 20.25H25.75" stroke="#0213B0" stroke-width="1.5"/>
-                    </svg>                   
+                        <path d="M22.4697 23.5303L23 24.0607L24.0607 23L23.5303 22.4697L22.4697 23.5303ZM9.53033 8.46967L9 7.93934L7.93934 9L8.46967 9.53033L9.53033 8.46967ZM23.5303 22.4697L9.53033 8.46967L8.46967 9.53033L22.4697 23.5303L23.5303 22.4697Z" fill="#0213B0"/>
+                        <path d="M23.5303 9.53033L24.0607 9L23 7.93934L22.4697 8.46967L23.5303 9.53033ZM8.46967 22.4697L7.93934 23L9 24.0607L9.53033 23.5303L8.46967 22.4697ZM22.4697 8.46967L8.46967 22.4697L9.53033 23.5303L23.5303 9.53033L22.4697 8.46967Z" fill="#0213B0"/>
+                    </svg>
                 </a>
             </div>
             <div class="header-logo">
-                <a href={getRelativeLocaleUrl(lang, './')} class="header-logo-link">
+                <a href={lang == 'vn' ? './index.html' : './en.html'} class="header-logo-link">
                     <Image src={logoImg} alt="" class="img-h"/>
                 </a>
             </div>
@@ -41,6 +40,11 @@ const {content, lang} = Astro.props;
                                     <span class="txt txt-16 header-menu-link-txt">
                                         {el.text}
                                     </span>
+                                    <div class="ic ic-16">
+                                        <svg width="100%" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6.58331 13.1668L10.75 9.00016L6.58331 4.8335" stroke="#0213B0" stroke-width="1.18056" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
                                 </a>
                             </div>
                         )    
@@ -56,7 +60,27 @@ const {content, lang} = Astro.props;
                                     <span class="txt txt-16 header-menu-link-txt">
                                         {el.text}
                                     </span>
+                                    <div class="ic ic-16">
+                                        <svg width="100%" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6.58331 13.1668L10.75 9.00016L6.58331 4.8335" stroke="#0213B0" stroke-width="1.18056" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
                                 </a>
+                                {el.type == 'drop' && (
+                                    <div class="header-menu-inner-drop">
+                                        <div class="header-menu-drop-item">
+                                            <div class="drop-inner">
+                                                {el.items.map(item => (
+                                                    <a href={`${getRelativeLocaleUrl(lang, item.url)}`} class="drop-inner-item">
+                                                        <span class="txt txt-16">
+                                                            <Fragment set:html={item.text.replaceAll('\n','<br>')} />
+                                                        </span>
+                                                    </a> 
+                                                ))}
+                                            </div>
+                                        </div>
+                                    </div>
+                                )}
                             </div>
                         )    
                     }   
@@ -64,7 +88,7 @@ const {content, lang} = Astro.props;
             </div>
             <div class="header-lang">
                 <div class="header-lang-wrap">
-                    <a href={`${getRelativeLocaleUrl('vn', Astro.url.pathname.replace('/en/','/') )}`} class="ic ic-32 header-lang-toggle">
+                    <a href={lang == 'vn' ? `${getRelativeLocaleUrl('en', Astro.url.pathname )}` : `${getRelativeLocaleUrl('vn', Astro.url.pathname.replace('/en/','/') )}`} class="ic ic-32 header-lang-toggle">
                         {lang == 'vn' ? 
                             <svg width="100%" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M24.4918 15.176V10.328C24.4918 9.88 24.8118 9.672 25.2598 9.672C25.7078 9.672 26.0118 9.88 26.0118 10.328V21.32C26.0118 21.944 25.6918 22.328 25.0518 22.328C24.3638 22.328 24.1078 22.056 23.7078 21.416L19.4678 14.552C18.8278 13.528 18.0278 11.96 17.6598 11.16C17.7558 12.184 17.8838 14.408 17.8838 16.76V21.672C17.8838 22.104 17.5638 22.328 17.1318 22.328C16.6838 22.328 16.3638 22.104 16.3638 21.672V10.632C16.3638 10.04 16.7478 9.672 17.3718 9.672C18.0918 9.672 18.3638 9.96 18.6678 10.44L22.6998 16.984C23.4358 18.184 24.3318 19.896 24.7478 20.792C24.6518 19.8 24.4918 17.48 24.4918 15.176Z" fill="#0213B0"/>
@@ -89,8 +113,6 @@ const {content, lang} = Astro.props;
         left: 0;
         z-index: 99;
         width: 100%;
-        padding-block: 1.6rem;
-        border-bottom: solid 1px var(--cl-blue);
         display: grid;
         &-main, &-nav {
             grid-column: 1/2;
@@ -103,10 +125,17 @@ const {content, lang} = Astro.props;
             }
         }
         &-main {
+            z-index: 2;
+            padding-block: 1.6rem;
+            border-bottom: solid 1px var(--cl-blue);
+            pointer-events: none;
             .container {
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                > * {
+                    pointer-events: auto;
+                }
                 @media screen and (max-width: 767px) {
                     position: relative;
                 }
@@ -162,6 +191,8 @@ const {content, lang} = Astro.props;
         }
         &-nav {
             pointer-events: none;
+            padding-block: 1.6rem;
+            border-bottom: solid 1px var(--cl-blue);
             .container {
                 height: 100%;
                 display: flex;
@@ -170,49 +201,182 @@ const {content, lang} = Astro.props;
                 > * {
                     pointer-events: auto;
                 }
+                @media screen and (max-width: 767px) {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: stretch;
+                    row-gap: 0;
+                    height: auto;
+                }
             }
             @media screen and (max-width: 767px) {
-                display: none;
+                position: fixed;
+                top: 6.4rem;
+                left: 0;
+                width: 100%;
+                height: calc(100vh - 6.4rem);
+                background-color: var(--cl-bg);
+                z-index: 1;
+                overflow-y: auto;
+                padding-block: 5rem 2.4rem;
+                opacity: 0;
+                pointer-events: none;
+                transform: translateX(100%);
+                transition: all 400ms ease;
+                &.active {
+                    transform: translateX(0);
+                    opacity: 1;
+                    pointer-events: all;
+                }
             }
         }
         &-menu {
             display: flex;
             align-items: center;
             column-gap: 3.2rem;
+            @media screen and (max-width: 767px) {
+                flex-direction: column;
+                align-items: stretch;
+                row-gap: 0;
+            }
             &.left {
                 margin-left: 1.5rem;
+                @media screen and (max-width: 767px) {
+                    margin-left: 0;
+                }
             }
             &.right {
                 margin-left: auto;
                 margin-right: 8.3rem;
+                @media screen and (max-width: 767px) {
+                    margin-inline: 0;
+                }
             }
+            &-link {
+                .ic {
+                    display: none;
+                }
+                @media screen and (max-width: 767px) {
+                    .ic {
+                        display: block;
+                    }
+                    padding-block: 2rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+                &.active, &:hover {
+                    text-decoration: underline;
+                }
+            }
+            &-inner {
+                &-item {
+                    position: relative;
+                    @media screen and (max-width: 767px) {
+                        border-bottom: solid 1px var(--cl-blue);
+                    }
+                    &.active {
+                        @media screen and (max-width: 767px) {
+                            .header-menu-inner-drop {
+                                max-height: 60rem;
+                                pointer-events: all;
+                                opacity: 1;
+                            }
+                        }
+                    }
+                    &:hover {
+                        .header-menu-inner-drop {
+                            opacity: 1;
+                            pointer-events: all;
+                        }
+                    }
+                    .header-menu-inner-drop {
+                        position: absolute;
+                        top: 100%;
+                        right: -12rem;
+                        padding-top: 1.8rem;
+                        opacity: 0;
+                        transition: all 400ms ease;
+                        pointer-events: none;
+                        @media screen and (max-width: 767px) {
+                            position: relative;
+                            top: auto;
+                            right: auto;
+                            padding-top: 0rem;
+                            opacity: 1;
+                            max-height: 0;
+                            border-radius: 0%;
+                            overflow: hidden;
+                            transition: all 600ms linear;
+                        }
+                        .drop-inner {
+                            padding-block: 2.4rem;
+                            padding-inline: 2rem;
+                            border-radius: .8rem;
+                            box-shadow: 3.2rem 3.2rem 4.4rem 0 rgba(2,19,176,.16); 
+                            background-color: var(--cl-bg);
+                            display: flex;
+                            flex-direction: column;
+                            row-gap: 2rem;
+                            color: var(--cl-blue);
+                            @media screen and (max-width: 767px) {
+                                padding: 0;
+                                box-shadow: none;
+                                padding-left: 2rem;
+                                padding-top: 1rem;
+                                padding-bottom: 2rem;
+                                row-gap: 2rem;
+                                border-radius: none;
+                                background-color: transparent;
+                            }
+                            .drop-inner-item {
+                                white-space: nowrap;
+                                display: flex;
+                                align-items: center;
+                                column-gap: .2rem;
+                                &.active, &:hover {
+                                    text-decoration: underline;
+                                }
+                                @media screen and (max-width: 767px) {
+                                    white-space: wrap;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
         }
         &-lang {
             display: flex;
             align-items: center;
+            @media screen and (max-width: 767px) {
+                margin-top: 2.4rem;
+
+            }
         }
     }
 </style>
 <script>
-    // if (window.innerWidth < 767) {
-    //     document.querySelector('.header-toggle-ic').addEventListener('click', function(e) {
-    //         e.preventDefault()
-    //         if (document.querySelector('.header-menu').classList.contains('active')) {
-    //             document.querySelector('.header-menu').classList.remove('active')
-    //             document.querySelector('.header-toggle-ic').classList.remove('active')
-    //             document.querySelector('.body').classList.remove('lockscroll')
-    //         } else {
-    //             document.querySelector('.header-menu').classList.add('active')
-    //             document.querySelector('.header-toggle-ic').classList.add('active')
-    //             document.querySelector('.body').classList.add('lockscroll')
-    //         }
-    //     })
-    //     document.querySelectorAll('.header-menu-link.type-drop').forEach((el, idx) => {
-    //         el.addEventListener('click', function(e) {
-    //             e.preventDefault();
-    //             el.closest('.header-menu-inner-item').classList.toggle('active')
-    //         })
-    //     })
-    // }
+    if (window.innerWidth < 767) {
+        document.querySelector('.header-toggle-ic').addEventListener('click', function(e) {
+            e.preventDefault()
+            if (document.querySelector('.header-nav').classList.contains('active')) {
+                document.querySelector('.header-nav').classList.remove('active')
+                document.querySelector('.header-toggle-ic').classList.remove('active')
+                document.querySelector('.body').classList.remove('lockscroll')
+            } else {
+                document.querySelector('.header-nav').classList.add('active')
+                document.querySelector('.header-toggle-ic').classList.add('active')
+                document.querySelector('.body').classList.add('lockscroll')
+            }
+        })
+        document.querySelectorAll('.header-menu-link.type-drop').forEach((el, idx) => {
+            el.addEventListener('click', function(e) {
+                e.preventDefault();
+                el.closest('.header-menu-inner-item').classList.toggle('active')
+            })
+        })
+    }
 </script>
 

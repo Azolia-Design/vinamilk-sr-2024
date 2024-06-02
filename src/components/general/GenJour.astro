@@ -1,13 +1,18 @@
 ---
 import { Image } from "astro:assets";
-import genJourImg from '../../assets/genJourImg.png';
 import genJourContent from '../../assets/genJourContent.svg?raw';
+import genJourContentMB from '../../assets/genJourContentMB.svg?raw';
 ---
 <section class="gen-jour">
     <div class="container">
         <div class="ex-wrap">
-            <div class="ex-content" data-aos="fade-up">
+            <div class="ex-content">
                 <Fragment set:html={genJourContent} />
+            </div>
+        </div>
+        <div class="ex-wrap ex-mb">
+            <div class="ex-content">
+                <Fragment set:html={genJourContentMB} />
             </div>
         </div>
     </div>

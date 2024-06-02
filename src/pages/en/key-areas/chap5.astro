@@ -1,0 +1,14 @@
+---
+import { Image } from 'astro:assets';
+import Layout from "../../../layouts/Layout.astro";
+import Chap5HeroEng from "../../../components/chap5/Chap5HeroEng.astro";
+import Chap5MainEng from "../../../components/chap5/Chap5MainEng.astro";
+import ChapNextBtn from "../../../components/ChapNextBtn.astro";
+import stripeWideGr from '../../../assets/stripe-wide-gr.svg'
+---
+<Layout title="Animal Welfare" hide_stripe={true} lang="en">
+	<Chap5HeroEng />
+	<Image src={stripeWideGr} alt="" class='decor'/>
+	<Chap5MainEng />
+    <ChapNextBtn link={'./chap6.html'} text="Soil Nutrients, Soil Quality And Retention"/>
+</Layout>

@@ -1,7 +1,9 @@
 ---
 import { Image } from "astro:assets";
 import appHeroImg from '../../assets/appHeroImg.png';
+import appHeroImgMB from '../../assets/appHeroImgMB.png';
 import appHeroContent from '../../assets/appHeroContent.svg';
+import appHeroContentMB from '../../assets/appHeroContentMB.svg';
 ---
 <section class="app-hero">
     <div class="container">
@@ -11,6 +13,14 @@ import appHeroContent from '../../assets/appHeroContent.svg';
             </div>
             <div class="ex-content" data-aos="fade-up" data-aos-delay="200">
                 <Image src={appHeroContent} alt="" />
+            </div>
+        </div>
+        <div class="ex-wrap ex-mb">
+            <div class="ex-img" data-aos="fade-up">
+                <Image src={appHeroImgMB} alt="" />
+            </div>
+            <div class="ex-content" data-aos="fade-up" data-aos-delay="200">
+                <Image src={appHeroContentMB} alt="" />
             </div>
         </div>
     </div>

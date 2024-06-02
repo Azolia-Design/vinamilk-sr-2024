@@ -19,11 +19,18 @@
             justify-content: end;
             align-items: center;
             padding-block: 5rem;
+            @media screen and (max-width: 767px) {
+                padding-block: 3.2rem;
+                justify-content: center;
+            }
         }
         .btn {
             padding-block: 1.6rem;
             padding-inline: 4.8rem;
             border-radius: 99rem;
+            @media screen and (max-width: 767px) {
+                text-align: center;
+            }
         }
     }
 </style>

@@ -1,0 +1,24 @@
+---
+import { Image } from "astro:assets";
+import genJourContent from '../../assets/genJourContentEng.svg?raw';
+import genJourContentMB from '../../assets/genJourContentEngMB.svg?raw';
+---
+<section class="gen-jour">
+    <div class="container">
+        <div class="ex-wrap">
+            <div class="ex-content">
+                <Fragment set:html={genJourContent} />
+            </div>
+        </div>
+        <div class="ex-wrap ex-mb">
+            <div class="ex-content">
+                <Fragment set:html={genJourContentMB} />
+            </div>
+        </div>
+    </div>
+</section>
+<style lang="scss">
+    .gen-jour {
+        background-color: var(--cl-blue);
+    }
+</style>

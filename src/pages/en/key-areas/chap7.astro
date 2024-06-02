@@ -1,0 +1,14 @@
+---
+import { Image } from 'astro:assets';
+import Layout from "../../../layouts/Layout.astro";
+import Chap7HeroEng from "../../../components/chap7/Chap7HeroEng.astro";
+import Chap7MainEng from "../../../components/chap7/Chap7MainEng.astro";
+import ChapNextBtn from "../../../components/ChapNextBtn.astro";
+import stripeWide from '../../../assets/stripe-wide.svg'
+---
+<Layout title="Biodiversity Conservation - Foundation For Sustainable Agriculture" hide_stripe={false} lang="en">
+	<Chap7HeroEng />
+	<Image src={stripeWide} alt="" class='decor'/>
+	<Chap7MainEng />
+    <ChapNextBtn link={'./chap8.html'} text="Waste Management"/>
+</Layout>

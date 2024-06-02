@@ -1,0 +1,14 @@
+---
+import { Image } from 'astro:assets';
+import Layout from "../../../layouts/Layout.astro";
+import Chap8HeroEng from "../../../components/chap8/Chap8HeroEng.astro";
+import Chap8MainEng from "../../../components/chap8/Chap8MainEng.astro";
+import ChapNextBtn from "../../../components/ChapNextBtn.astro";
+import stripeWideGr2 from '../../../assets/stripe-wide-gr2.svg'
+---
+<Layout title="Waste Management" hide_stripe={false} lang="en">
+	<Chap8HeroEng />
+	<Image src={stripeWideGr2} alt="" class='decor'/>
+	<Chap8MainEng />
+    <ChapNextBtn link={'./chap9.html'} text="Water Availability And Quality"/>
+</Layout>

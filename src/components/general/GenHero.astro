@@ -2,6 +2,8 @@
 import { Image } from "astro:assets";
 import genHeroImg from '../../assets/genHeroImg.png';
 import genHeroContent from '../../assets/genHeroContent.svg';
+import genHeroImgMB from '../../assets/genHeroImgMB.png';
+import genHeroContentMB from '../../assets/genHeroContentMB.svg';
 ---
 <section class="gen-hero">
     <div class="container">
@@ -11,6 +13,14 @@ import genHeroContent from '../../assets/genHeroContent.svg';
             </div>
             <div class="ex-content" data-aos="fade-up" data-aos-delay="200">
                 <Image src={genHeroContent} alt="" />
+            </div>
+        </div>
+        <div class="ex-wrap ex-mb">
+            <div class="ex-img" data-aos="fade-up">
+                <Image src={genHeroImgMB} alt="" />
+            </div>
+            <div class="ex-content" data-aos="fade-up" data-aos-delay="200">
+                <Image src={genHeroContentMB} alt="" />
             </div>
         </div>
     </div>

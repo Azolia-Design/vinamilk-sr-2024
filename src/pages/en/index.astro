@@ -1,5 +1,9 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import HomeHeroEng from "../../components/home/HomeHeroEng.astro";
+import HomeSumEng from "../../components/home/HomeSumEng.astro";
 ---
-<Layout title="Homepage" lang="en">
+<Layout title="Homepage" hide_stripe={true} lang="en">
+	<HomeHeroEng />
+	<HomeSumEng />
 </Layout>

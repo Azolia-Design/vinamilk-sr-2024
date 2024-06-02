@@ -1,0 +1,20 @@
+---
+import { Image } from 'astro:assets';
+import Layout from "../../layouts/Layout.astro";
+import GenHeroEng from "../../components/general/GenHeroEng.astro";
+import GenJourEng from "../../components/general/GenJourEng.astro";
+import GenResEng from "../../components/general/GenResEng.astro";
+import GenAwardEng from "../../components/general/GenAwardEng.astro";
+import ChapNextBtn from "../../components/ChapNextBtn.astro";
+import stripeWide from '../../assets/stripe-wide.svg'
+---
+<Layout title="General information" hide_stripe={false} lang="en">
+	<GenHeroEng />
+	<Image src={stripeWide} alt="" class='decor' />
+	<GenJourEng />
+	<Image src={stripeWide} alt="" class='decor'/>
+	<GenResEng />
+	<Image src={stripeWide} alt="" class='decor'/>
+	<GenAwardEng />
+	<ChapNextBtn link={'./approach.html'} text="Approach"/>
+</Layout>

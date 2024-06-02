@@ -1,16 +1,21 @@
 ---
 import { Image } from "astro:assets";
-import genAwardImg from '../../assets/genAwardImg.png';
+import genAwardImgMB from '../../assets/genAwardImgMB.svg';
 import genAwardContent from '../../assets/genAwardContent.svg?raw';
 ---
 <section class="gen-award">
     <div class="container">
         <div class="ex-wrap">
-            <div class="ex-img" data-aos="fade-up">
+            <!-- <div class="ex-img" data-aos="fade-up">
                 <Image src={genAwardImg} alt="" />
-            </div>
-            <div class="ex-content" data-aos="fade-up">
+            </div> -->
+            <div class="ex-content">
                 <Fragment set:html={genAwardContent} />
+            </div>
+        </div>
+        <div class="ex-wrap ex-mb">
+            <div class="ex-img" data-aos="fade-up">
+                <Image src={genAwardImgMB} alt="" />
             </div>
         </div>
     </div>

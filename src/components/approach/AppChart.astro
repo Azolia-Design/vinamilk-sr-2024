@@ -1,12 +1,18 @@
 ---
 import { Image } from "astro:assets";
 import appChartContent from '../../assets/appChartContent.svg?raw';
+import appChartContentMB from '../../assets/appChartContentMB.svg';
 ---
 <section class="app-chart">
     <div class="container">
         <div class="ex-wrap">
-            <div class="ex-content" data-aos="fade-up">
+            <div class="ex-content">
                 <Fragment set:html={appChartContent} />
+            </div>
+        </div>
+        <div class="ex-wrap ex-mb"  data-aos="fade-up">
+            <div class="ex-content">
+                <Image src={appChartContentMB} alt="" />
             </div>
         </div>
     </div>

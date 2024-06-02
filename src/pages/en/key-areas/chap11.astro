@@ -1,0 +1,14 @@
+---
+import { Image } from 'astro:assets';
+import Layout from "../../../layouts/Layout.astro";
+import Chap11HeroEng from "../../../components/chap11/Chap11HeroEng.astro";
+import Chap11MainEng from "../../../components/chap11/Chap11MainEng.astro";
+import Chap11Main2Eng from "../../../components/chap11/Chap11Main2Eng.astro";
+import stripeWidePink from '../../../assets/stripe-wide-pink.svg'
+---
+<Layout title="Spreading Love For A Happy Community" hide_stripe={false} lang="en">
+	<Chap11HeroEng />
+	<Image src={stripeWidePink} alt="" class='decor'/>
+	<Chap11MainEng />
+	<Chap11Main2Eng />
+</Layout>

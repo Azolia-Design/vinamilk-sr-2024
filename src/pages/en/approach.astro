@@ -1,0 +1,17 @@
+---
+import { Image } from 'astro:assets';
+import Layout from "../../layouts/Layout.astro";
+import AppHeroEng from "../../components/approach/AppHeroEng.astro";
+import AppChartEng from "../../components/approach/AppChartEng.astro";
+import AppColsEng from "../../components/approach/AppColsEng.astro";
+import ChapNextBtn from "../../components/ChapNextBtn.astro";
+
+import stripeWide from '../../assets/stripe-wide.svg'
+---
+<Layout title="Approach" hide_stripe={false} lang="en">
+	<AppHeroEng />
+	<Image src={stripeWide} alt="" class='decor'/>
+	<AppChartEng />
+	<AppColsEng />
+	<ChapNextBtn link={'./key-areas.html'} text="Materialty areas"/>
+</Layout>

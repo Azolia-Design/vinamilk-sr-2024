@@ -1,0 +1,24 @@
+---
+import { Image } from "astro:assets";
+import chap1NetImg4 from '../../assets/chap1NetImg4Eng.svg?raw';
+import chap1NetContent4MB from '../../assets/chap1NetImg4EngMB.svg';
+---
+<section class="chap1-net-2">
+    <div class="container">
+        <div class="ex-wrap">
+            <div class="ex-content">
+                <Fragment set:html={chap1NetImg4} />
+            </div>
+        </div>
+        <div class="ex-wrap ex-mb">
+            <div class="ex-img" data-aos="fade-up">
+                <Image src={chap1NetContent4MB} alt="" />
+            </div>
+        </div>
+    </div>
+</section>
+<style lang="scss">
+    .chap1-net-2 {
+        background-color: var(--cl-bg);
+    }
+</style>

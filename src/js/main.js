@@ -20,5 +20,5 @@ allCounters.forEach((el, idx) => {
         onCompleteCallback: () => {
             el.textContent = original
         }
-        });
+    });
 })

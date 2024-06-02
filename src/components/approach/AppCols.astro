@@ -1,12 +1,18 @@
 ---
 import { Image } from "astro:assets";
 import appColsContent from '../../assets/appColsContent.svg?raw';
+import appColsContentMB from '../../assets/appColsContentMB.svg';
 ---
 <section class="app-cols">
     <div class="container">
         <div class="ex-wrap">
-            <div class="ex-content" data-aos="fade-up">
+            <div class="ex-content">
                 <Fragment set:html={appColsContent} />
+            </div>
+        </div>
+        <div class="ex-wrap ex-mb">
+            <div class="ex-content" data-aos="fade-up">
+                <Image src={appColsContentMB} alt="" />
             </div>
         </div>
     </div>

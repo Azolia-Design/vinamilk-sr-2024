@@ -6,9 +6,9 @@ import Chap8Main from "../../components/chap8/Chap8Main.astro";
 import ChapNextBtn from "../../components/ChapNextBtn.astro";
 import stripeWideGr2 from '../../assets/stripe-wide-gr2.svg'
 ---
-<Layout title="Nguồn nước và chất lượng nước" hide_stripe={false}>
+<Layout title="Quản lý chất thải" hide_stripe={false}>
 	<Chap8Hero />
-	<Image src={stripeWideGr2} alt="" />
+	<Image src={stripeWideGr2} alt="" class='decor'/>
 	<Chap8Main />
-    <ChapNextBtn link={'./chap9'} text="Phát triển thị trường"/>
+    <ChapNextBtn link={'./chap9.html'} text="Nguồn nước và chất lượng nước"/>
 </Layout>

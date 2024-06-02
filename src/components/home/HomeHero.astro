@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import homeHeroBg from '../../assets/home-hero-bg.jpg';
 import homeHeroBgMb from '../../assets/mb-home-hero-bg.jpg';
+import homeHeroVid from '/video/home.mp4';
 ---
 <section class="home-hero">
     <div class="container">
@@ -13,7 +14,7 @@ import homeHeroBgMb from '../../assets/mb-home-hero-bg.jpg';
                 Net Zero 2050
             </div>
             <div class="home-hero-btn-wrap" data-aos="fade-up" data-aos-delay="300">
-                <a href="#" class="btn home-hero-btn">
+                <a href="https://www.vinamilk.com.vn/static/uploads/article/1713846678-f9f0dfe94e842338f4829a24fb50fa6508d19ea1bdb61e04c753200b57368d54.pdf" target="_blank" class="btn home-hero-btn">
                     <span class="txt txt-16 txt-med">
                         Báo cáo Phát triển Bền Vững 2023
                     </span>
@@ -22,6 +23,7 @@ import homeHeroBgMb from '../../assets/mb-home-hero-bg.jpg';
         </div>
     </div>
     <div class="home-hero-img-wrap" data-aos="fade-up">
+        <video src={homeHeroVid} autoplay muted playsinline class="vid-fill img-dk"></video>
         <Image src={homeHeroBg} loading="eager" alt="" class="img-fill img-dk"/>
         <Image src={homeHeroBgMb} loading="eager" alt="" class="img-fill img-mb"/>
     </div>
@@ -90,6 +92,11 @@ import homeHeroBgMb from '../../assets/mb-home-hero-bg.jpg';
             position: absolute;
             inset: 0;
             z-index: 1;
+            .vid-fill {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
             .img-dk {
                 @media screen and (max-width: 767px) {
                     display: none;

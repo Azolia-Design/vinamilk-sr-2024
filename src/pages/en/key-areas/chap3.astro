@@ -1,0 +1,14 @@
+---
+import { Image } from 'astro:assets';
+import Layout from "../../../layouts/Layout.astro";
+import Chap3HeroEng from "../../../components/chap3/Chap3HeroEng.astro";
+import Chap3MainEng from "../../../components/chap3/Chap3MainEng.astro";
+import ChapNextBtn from "../../../components/ChapNextBtn.astro";
+import stripeWide from '../../../assets/stripe-wide.svg'
+---
+<Layout title="Working Conditions And Human Resource Development" hide_stripe={false} lang="en">
+	<Chap3HeroEng />
+	<Image src={stripeWide} alt="" class='decor'/>
+	<Chap3MainEng />
+    <ChapNextBtn link={'./chap4.html'} text="Local Economy"/>
+</Layout>

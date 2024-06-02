@@ -1,0 +1,316 @@
+---
+import { getRelativeLocaleUrl } from 'astro:i18n';
+import { Image } from 'astro:assets';
+import stripe from '../../assets/stripe.svg';
+import dl_google from '../../assets/Google play.svg';
+import dl_apple from '../../assets/App Store.svg';
+import ic_fb from '../../assets/fb.svg';
+import ic_ins from '../../assets/ins.svg';
+import ic_in from '../../assets/in.svg';
+import ic_youtube from '../../assets/youtube.svg';
+import ic_tiktok from '../../assets/tiktok.svg';
+import BCT from '../../assets/BCT.png';
+
+const {content, lang} = Astro.props;
+---
+{Astro.props.hide_stripe != true ? <Image src={stripe} alt="" /> : <div class="line"></div>}
+<footer class="footer">
+    <div class="container top">
+        <div class="grp grp-main" data-aos="fade-up">
+            <a href="https://www.vinamilk.com.vn/static/uploads/article/1713856139-0d209c698f1b78671211b2ae0adee1a8b5af07e44573a12b6fb520d0b8d146d7.pdf" target="_blank" class="btn ft-main-btn">
+                <span class="txt txt-16 txt-med">Download Vinamilk SR 2023 (PDF)</span>
+            </a>
+            <div class="btn-dl-wrap">
+                <a href="#" class="btn-dl">
+                    <Image src={dl_google} alt='' />
+                </a>
+                <a href="#" class="btn-dl">
+                    <Image src={dl_apple} alt='' />
+                </a>
+            </div>
+            <div class="socials-wrap">
+                <a href="#" class="ic ic-32 social-item">
+                    <Image src={ic_fb} alt='' />
+                </a>
+                <a href="#" class="ic ic-32 social-item">
+                    <Image src={ic_ins} alt='' />
+                </a>
+                <a href="#" class="ic ic-32 social-item">
+                    <Image src={ic_in} alt='' />
+                </a>
+                <a href="#" class="ic ic-32 social-item">
+                    <Image src={ic_youtube} alt='' />
+                </a>
+                <a href="#" class="ic ic-32 social-item">
+                    <Image src={ic_tiktok} alt='' />
+                </a>
+            </div>
+        </div>
+        <div class="grp-row">
+            <div class="grp grp-sub" data-aos="fade-up" data-aos-delay="200">
+                <a href="https://new.vinamilk.com.vn/tuyen-dung/vi-sao-chon-vinamilk" target="_blank" class="txt txt-16 txt-med label">
+                    <span>Recruitment</span>
+                </a>
+                <a href="https://www.vinamilk.com.vn/vi/phat-trien-ben-vung" target="_blank" class="txt txt-16 txt-med label">
+                    <span>Sustainable Development</span>
+                </a>
+                <a href="https://www.vinamilk.com.vn/vi/cai-tien-doi-moi" target="_blank" class="txt txt-16 txt-med label">
+                    <span>Improvement & Innovation</span>
+                </a>
+                <a href="https://new.vinamilk.com.vn/store-list" target="_blank" class="txt txt-16 txt-med label">
+                    <span>Distribution System</span>
+                </a>
+                <a href="https://new.vinamilk.com.vn/blogs/thong-tin-dinh-duong" target="_blank" class="txt txt-16 txt-med label">
+                    <span>Nutrition information</span>
+                </a>
+            </div>
+            <div class="grp grp-sub" data-aos="fade-up" data-aos-delay="300">
+                <a href="https://www.vinamilk.com.vn/vi/cau-chuyen-vinamilk" target="_blank" class="txt txt-16 txt-med label">
+                    <span>Vinamilk Story</span>
+                </a>
+                <a href="https://new.vinamilk.com.vn/about-us" target="_blank" class="txt txt-16 txt-med txt-inter link">
+                    <span>About the company</span>
+                </a>
+                <a href="https://www.vinamilk.com.vn/vi/lich-su-phat-trien" target="_blank" class="txt txt-16 txt-med txt-inter link">
+                    <span>Development history</span>
+                </a>
+                <a href="https://www.vinamilk.com.vn/vi/don-vi-thanh-vien" target="_blank" class="txt txt-16 txt-med txt-inter link">
+                    <span>Subordinate units</span>
+                </a>
+                <a href="https://www.vinamilk.com.vn/vi/thanh-tich-noi-bat" target="_blank" class="txt txt-16 txt-med txt-inter link">
+                    <span>Outstanding achievements</span>
+                </a>
+            </div>
+            <div class="grp grp-sub" data-aos="fade-up" data-aos-delay="400">
+                <a href="https://new.vinamilk.com.vn/quan-he-co-dong" target="_blank" class="txt txt-16 txt-med label">
+                    <span>Investor Relations</span>
+                </a>
+                <a href="https://new.vinamilk.com.vn/dai-hoi-dong-co-dong" target="_blank" class="txt txt-16 txt-med txt-inter link">
+                    <span>Shareholders' Meeting</span>
+                </a>
+                <a href="https://new.vinamilk.com.vn/bao-cao" target="_blank" class="txt txt-16 txt-med txt-inter link">
+                    <span>Annual Report</span>
+                </a>
+                <a href="https://new.vinamilk.com.vn/thong-bao-co-dong" target="_blank" class="txt txt-16 txt-med txt-inter link">
+                    <span>Announcements</span>
+                </a>
+            </div>
+            <div class="grp grp-sub" data-aos="fade-up" data-aos-delay="500">
+                <a href="https://new.vinamilk.com.vn/lien-he" target="_blank" class="txt txt-16 txt-med label">
+                    <span>Contact</span>
+                </a>
+                <a href="https://new.vinamilk.com.vn/blogs/truyen-thong" target="_blank" class="txt txt-16 txt-med txt-inter link">
+                    <span>Media</span>
+                </a>
+                <a href="https://new.vinamilk.com.vn/blogs/thong-cao-bao-chi" target="_blank" class="txt txt-16 txt-med txt-inter link">
+                    <span>Press Release</span>
+                </a>
+                <a href="https://new.vinamilk.com.vn/blogs/tin-tuc-su-kien" target="_blank" class="txt txt-16 txt-med txt-inter link">
+                    <span>News-Events</span>
+                </a>
+                <a href="https://new.vinamilk.com.vn/identity" target="_blank" class="txt txt-16 txt-med txt-inter link">
+                    <span>Library</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copy">
+        <div class="container bot" data-aos="fade-up">
+            <div class="line"></div>
+            <div class="grp-copy-left">
+                <div class="grp-copy-top">
+                    <div class="txt txt-14 txt-inter label">© 2023 Vinamilk All Rights Reserved|</div>
+                    <a href="https://new.vinamilk.com.vn/terms-of-use" target="_blank" class="txt txt-12 txt-inter link">
+                        Terms and Conditions
+                    </a>
+                    <div class="line-ver"></div>
+                    <a href="https://new.vinamilk.com.vn/privacy-policy" target="_blank" class="txt txt-12 txt-inter link">
+                        Privacy Policy
+                    </a>
+                </div>
+                <div class="grp-copy-bot">
+                    <div class="txt txt-14 txt-inter">
+                        Certificate of business registration: 0300588569. Date registered: 20/11/2003 issued by Department of Planning and Investment of Ho Chi Minh City.
+                    </div>
+                </div>
+            </div>
+            <div class="grp-copy-right">
+                <Image src={BCT} alt='' />
+            </div>
+        </div>
+    </div>
+</footer>
+<style lang="scss">
+    .footer {
+        background-color: var(--cl-blue);
+        contain: paint;
+        .container {
+            padding-inline: 4rem;
+            display: flex;
+            justify-content: space-between;
+            @media screen and (max-width: 767px) {
+                padding-inline: 1.6rem;
+                flex-direction: column;
+            }
+            &.top {
+                padding-block: 8.5rem 5.6rem;
+                @media screen and (max-width: 767px) {
+                    padding-block: 5.1rem 4.8rem;
+                }
+            }
+        }
+        .grp {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+            row-gap: 2rem;
+            &-main {
+                width: 26.6rem;
+                @media screen and (max-width: 767px) {
+                    width: 100%;
+                    align-items: center;
+                    margin-bottom: 6rem;
+                }
+                .ft-main-btn {
+                    padding-block: 1.6rem;
+                    padding-inline: 1.2rem;
+                    position: relative;
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        border: 1px solid var(--cl-bg);
+                        border-radius: 0.5rem;
+                        z-index: 2;
+                        opacity: 0;
+                        transition: all 400ms ease;
+                        pointer-events: none;
+                    }
+                    &:hover::after {
+                        opacity: 1;
+                    }
+                    @media screen and (max-width: 767px) {
+                        padding-inline: 1.2rem;
+                    }
+                    .span {
+                        line-height: 2.4rem;
+                    }
+                }
+                .btn-dl-wrap {
+                    display: flex;
+                    column-gap: .8rem;
+                    @media screen and (max-width: 767px) {
+                        .btn-dl {
+                            width: 12.2rem;
+                        }
+                    }
+                }
+                .socials-wrap {
+                    display: flex;
+                    column-gap: 1.2rem;
+                    @media screen and (max-width: 767px) {
+                        column-gap: 2.3rem;
+                    }
+                }
+            }
+            &-row {
+                height: 100%;
+                display: flex;
+                justify-content: end;
+                color: var(--cl-bg);
+                column-gap: 2.4rem;
+                @media screen and (max-width: 767px) {
+                    flex-direction: column;
+                    row-gap: 2.8rem;
+                }
+            }
+            &-sub {
+                width: 21.9rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                align-items: start;
+                row-gap: 0;
+                .label, .link {
+                    line-height: 2rem;
+                }
+                .link {
+                    @media screen and (max-width: 767px) {
+                        font-size: 1.4rem;
+                    }
+                }
+                .label:not(:last-child) {
+                    margin-bottom: 1.8rem;
+                }
+                .link:not(:last-child) {
+                    margin-bottom: 1.2rem;
+                }
+            }
+        }
+        &-copy {
+            color: var(--cl-bg);
+            .container.bot {
+                padding-block: 2rem 4rem;
+                position: relative;
+                align-items: center;
+                @media screen and (max-width: 767px) {
+                    padding-block: 2.4rem 3.2rem;
+                    align-items: start;
+                    row-gap: 2rem;
+                }
+                .line {
+                    position: absolute;
+                    top: 0;
+                    left: 4rem;
+                    right: 4rem;
+                    background-color: var(--cl-bg);
+                    width: auto;
+                    @media screen and (max-width: 767px) {
+                        display: none;
+                    }
+                }
+            }
+            .grp-copy-top {
+                display: flex;
+                align-items: center;
+                column-gap: .4rem;
+                @media screen and (max-width: 767px) {
+                    display: grid;
+                    row-gap: .4rem;
+                    grid-template-columns: auto calc(1px + .4rem) 1fr;
+                    .label {
+                        grid-column: 1/4;
+
+                    }
+                }
+                .line-ver {
+                    background-color: var(--cl-bg);
+                    width: 1px;
+                    height: 1.6rem;
+                    margin-inline: .2rem;
+                    @media screen and (max-width: 767px) {
+
+                    }
+                }
+                .link {
+                    text-decoration: underline;
+                }
+            }
+            .grp-copy-left {
+                @media screen and (max-width: 767px) {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                    row-gap: .8rem;
+                }
+            }
+            .grp-copy-right {
+                width: 15rem;
+            }
+        }
+    }
+</style>

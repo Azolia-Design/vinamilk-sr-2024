@@ -1,0 +1,27 @@
+---
+import { Image } from "astro:assets";
+import appHeroImg from '../../assets/appHeroImgEng.png';
+import appHeroImgMB from '../../assets/appHeroImgEngMB.png';
+import appHeroContent from '../../assets/appHeroContent.svg';
+import appHeroContentMB from '../../assets/appHeroContentMB.svg';
+---
+<section class="app-hero">
+    <div class="container">
+        <div class="ex-wrap">
+            <div class="ex-img" data-aos="fade-up">
+                <Image src={appHeroImg} alt="" />
+            </div>
+        </div>
+        <div class="ex-wrap ex-mb">
+            <div class="ex-img" data-aos="fade-up">
+                <Image src={appHeroImgMB} alt="" />
+            </div>
+        </div>
+    </div>
+</section>
+<style lang="scss">
+    .app-hero {
+        padding-top: 7.2rem;
+        
+    }
+</style>

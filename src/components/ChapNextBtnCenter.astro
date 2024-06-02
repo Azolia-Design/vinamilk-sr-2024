@@ -15,11 +15,17 @@
 <style lang="scss">
     .nav-btn-wrap-center {
         background-color: var(--cl-blue);
+        @media screen and (max-width: 767px) {
+            background-color: var(--cl-bg);
+        }
         .container {
             display: flex;
             justify-content: center;
             align-items: center;
             padding-block: 9rem;
+            @media screen and (max-width: 767px) {
+                padding-block: 3.2rem;
+            }
         }
         .btn {
             padding-block: 1.6rem;
@@ -27,12 +33,19 @@
             border-radius: 99rem;
             background-color: var(--cl-bg);
             color: var(--cl-blue);
-            &:hover {
-                background-color: transparent;
+            @media screen and (max-width: 767px) {
+                background-color: var(--cl-blue);
                 color: var(--cl-bg);
-                border-color: var(--cl-bg);
+                text-align: center;
             }
-            box-shadow: 1rem 1rem 2.6rem 0 rgba(0,0,0,.32);
+            @media screen and (min-width: 767px) {
+                &:hover {
+                    background-color: transparent;
+                    color: var(--cl-bg);
+                    border-color: var(--cl-bg);
+                }
+                box-shadow: 1rem 1rem 2.6rem 0 rgba(0,0,0,.32);
+            }
         }
     }
 </style>

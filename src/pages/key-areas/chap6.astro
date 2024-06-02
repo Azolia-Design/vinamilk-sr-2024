@@ -6,9 +6,9 @@ import Chap6Main from "../../components/chap6/Chap6Main.astro";
 import ChapNextBtn from "../../components/ChapNextBtn.astro";
 import stripeWide from '../../assets/stripe-wide.svg'
 ---
-<Layout title="Dinh dưỡng, chất lượng và lưu giữ đất" hide_stripe={false}>
+<Layout title="Dinh dưỡng đất" hide_stripe={false}>
 	<Chap6Hero />
-	<Image src={stripeWide} alt="" />
+	<Image src={stripeWide} alt="" class='decor'/>
 	<Chap6Main />
-    <ChapNextBtn link={'./chap7'} text="Quản lý chất thải"/>
+    <ChapNextBtn link={'./chap7.html'} text="Đa dạng sinh học"/>
 </Layout>

@@ -1,0 +1,24 @@
+---
+import { Image } from "astro:assets";
+import genResImgMB from '../../assets/genResContentEngMB.svg';
+import genResContent from '../../assets/genResContentEng.svg?raw';
+---
+<section class="gen-res">
+    <div class="container">
+        <div class="ex-wrap">
+            <div class="ex-content">
+                <Fragment set:html={genResContent} />
+            </div>
+        </div>
+        <div class="ex-wrap ex-mb">
+            <div class="ex-img" data-aos="fade-up">
+                <Image src={genResImgMB} alt="" />
+            </div>
+        </div>
+    </div>
+</section>
+<style lang="scss">
+    .gen-res {
+        background-color: var(--cl-blue);
+    }
+</style>

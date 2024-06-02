@@ -1,0 +1,22 @@
+---
+import { Image } from 'astro:assets';
+import Layout from "../../../layouts/Layout.astro";
+import Chap1HeroEng from "../../../components/chap1/Chap1HeroEng.astro";
+import Chap1NetEng from "../../../components/chap1/Chap1NetEng.astro";
+import Chap1Net2Eng from "../../../components/chap1/Chap1Net2Eng.astro";
+import Chap1Net3Eng from "../../../components/chap1/Chap1Net3Eng.astro";
+import Chap1Net4Eng from "../../../components/chap1/Chap1Net4Eng.astro";
+import Chap1Net5Eng from "../../../components/chap1/Chap1Net5Eng.astro";
+import ChapNextBtn from "../../../components/ChapNextBtn.astro";
+import stripeWideGr from '../../../assets/stripe-wide-gr.svg'
+---
+<Layout title="Greenhouse Gas Emissions" hide_stripe={false} lang="en">
+	<Chap1HeroEng />
+	<Image src={stripeWideGr} alt="" class='decor'/>
+	<Chap1NetEng />
+    <Chap1Net2Eng />
+    <Chap1Net3Eng />
+    <Chap1Net4Eng />
+    <Chap1Net5Eng />
+    <ChapNextBtn link={'./chap2.html'} text="Product Safety And Quality"/>
+</Layout>

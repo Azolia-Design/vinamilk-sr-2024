@@ -4,11 +4,11 @@ import Layout from "../../layouts/Layout.astro";
 import Chap9Hero from "../../components/chap9/Chap9Hero.astro";
 import Chap9Main from "../../components/chap9/Chap9Main.astro";
 import ChapNextBtn from "../../components/ChapNextBtn.astro";
-import stripeWideBlue from '../../assets/stripe-wide-blue.svg'
+import stripeWide from '../../assets/stripe-wide.svg'
 ---
-<Layout title="Phát triển thị trường" hide_stripe={false}>
+<Layout title="Nguồn nước và chất lượng nước" hide_stripe={false}>
 	<Chap9Hero />
-	<Image src={stripeWideBlue} alt="" />
+	<Image src={stripeWide} alt="" class='decor'/>
 	<Chap9Main />
-    <ChapNextBtn link={'./chap10'} text="Lan tỏa yêu thương vì một cộng đồng hạnh phúc"/>
+    <ChapNextBtn link={'./chap10.html'} text="Phát triển thị trường"/>
 </Layout>

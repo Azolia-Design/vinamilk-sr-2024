@@ -1,0 +1,14 @@
+---
+import { Image } from 'astro:assets';
+import Layout from "../../../layouts/Layout.astro";
+import Chap6HeroEng from "../../../components/chap6/Chap6HeroEng.astro";
+import Chap6MainEng from "../../../components/chap6/Chap6MainEng.astro";
+import ChapNextBtn from "../../../components/ChapNextBtn.astro";
+import stripeWide from '../../../assets/stripe-wide.svg'
+---
+<Layout title="Soil Nutrients, Soil Quality And Retention" hide_stripe={false} lang="en">
+	<Chap6HeroEng />
+	<Image src={stripeWide} alt="" class='decor'/>
+	<Chap6MainEng />
+    <ChapNextBtn link={'./chap7.html'} text="Biodiversity Conservation - Foundation For Sustainable Agriculture"/>
+</Layout>
