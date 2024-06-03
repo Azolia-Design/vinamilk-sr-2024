@@ -1,13 +1,19 @@
 ---
 import { Image } from "astro:assets";
-import chap5AddMainImg from '../../assets/chap5AddMain2ContentEng.png';
-import chap5AddMainContentMB from '../../assets/chap5AddMain2ContentEngMB.png';
+import chap5AddMainImg from '../../assets/chap5AddMain22ImgEng.png';
+import chap5AddMainContent from '../../assets/chap5AddMain2ContentEng.svg';
+import chap5AddMainContentMB from '../../assets/chap5AddMain2ContentEngMB.svg';
+import chap5AddMain2Img from '../../assets/chap5AddMain3Img.png';
+import chap5AddMain2Content from '../../assets/chap5AddMain3ContentEng.svg';
 ---
 <section class="chap5add-main">
     <div class="container">
         <div class="ex-wrap">
             <div class="ex-img" data-aos="fade-up">
                 <Image src={chap5AddMainImg} alt="" />
+            </div>
+            <div class="ex-content" data-aos="fade-up" data-aos-delay="200">
+                <Image src={chap5AddMainContent} alt="" />
             </div>
         </div>
         <div class="ex-wrap ex-mb">
@@ -20,6 +26,12 @@ import chap5AddMainContentMB from '../../assets/chap5AddMain2ContentEngMB.png';
 <section class="chap5add-main2">
     <div class="container">
         <div class="ex-wrap">
+            <div class="ex-img" data-aos="fade-up">
+                <Image src={chap5AddMain2Img} alt="" />
+            </div>
+            <div class="ex-content" data-aos="fade-up" data-aos-delay="200">
+                <Image src={chap5AddMain2Content} alt="" />
+            </div>
         </div>
     </div>
 </section>

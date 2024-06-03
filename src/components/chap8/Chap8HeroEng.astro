@@ -1,13 +1,17 @@
 ---
 import { Image } from "astro:assets";
-import chap7HeroImg from '../../assets/chap7HeroImgEng.png';
-import chap7HeroContentMB from '../../assets/chap7HeroImgEngMB.png';
+import chap7HeroImg from '../../assets/chap7HeroImg.png';
+import chap7HeroContent from '../../assets/chap7HeroContentEng.svg';
+import chap7HeroContentMB from '../../assets/chap7HeroImgEngMB.svg';
 ---
 <section class="chap7-hero">
     <div class="container">
         <div class="ex-wrap">
             <div class="ex-img" data-aos="fade-up">
                 <Image src={chap7HeroImg} alt="" />
+            </div>
+            <div class="ex-content" data-aos="fade-up" data-aos-delay="200">
+                <Image src={chap7HeroContent} alt="" />
             </div>
         </div>
         <div class="ex-wrap ex-mb">

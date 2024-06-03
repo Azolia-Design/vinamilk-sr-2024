@@ -1,13 +1,13 @@
 ---
 import { Image } from "astro:assets";
-import chap5MainImg from '../../assets/chap5MainImgEng.png';
-import chap5MainContentMB from '../../assets/chap5MainImgEngMB.png';
+import chap5MainImg from '../../assets/chap5MainImgEng.svg?raw';
+import chap5MainContentMB from '../../assets/chap5MainImgEngMB.svg';
 ---
 <section class="chap5-main">
     <div class="container">
         <div class="ex-wrap">
-            <div class="ex-img" data-aos="fade-up">
-                <Image src={chap5MainImg} alt="" />
+            <div class="ex-content">
+                <Fragment set:html={chap5MainImg} />
             </div>
         </div>
         <div class="ex-wrap ex-mb">

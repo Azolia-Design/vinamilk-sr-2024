@@ -1,13 +1,17 @@
 ---
 import { Image } from "astro:assets";
-import chap10MainImg from '../../assets/chap10MainImgEng.png';
-import chap10MainContentMB from '../../assets/chap10MainImgEngMB.png';
+import chap10MainImg from '../../assets/chap10MainImg.png';
+import chap10MainContent from '../../assets/chap10MainContentEng.svg';
+import chap10MainContentMB from '../../assets/chap10MainImgEngMB2.png';
 ---
 <section class="chap10-main">
     <div class="container">
-        <div class="ex-wrap" data-aos="fade-up">
-            <div class="ex-img">
+        <div class="ex-wrap">
+            <div class="ex-img" data-aos="fade-up">
                 <Image src={chap10MainImg} alt="" />
+            </div>
+            <div class="ex-content" data-aos="fade-up" data-aos-delay="200">
+                <Image src={chap10MainContent} alt="" />
             </div>
         </div>
         <div class="ex-wrap ex-mb" data-aos="fade-up">
