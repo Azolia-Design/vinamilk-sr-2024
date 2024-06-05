@@ -4,12 +4,16 @@ import appHeroImg from '../../assets/appHeroImg.png';
 import appHeroImgMB from '../../assets/appHeroImgMB.png';
 import appHeroContent from '../../assets/appHeroContent.svg';
 import appHeroContentMB from '../../assets/appHeroContentMB.svg';
+import appHeroVid from '/video/chap2.mp4';
 ---
 <section class="app-hero">
     <div class="container">
         <div class="ex-wrap">
             <div class="ex-img" data-aos="fade-up">
-                <Image src={appHeroImg} alt="" />
+                <Image src={appHeroImg} alt="" style={'opacity: 0'}/>
+                <div class="vid-wrap">
+                    <video src={appHeroVid} autoplay muted playsinline class="vid-fill img-dk"></video>
+                </div>
             </div>
             <div class="ex-content" data-aos="fade-up" data-aos-delay="200">
                 <Image src={appHeroContent} alt="" />
@@ -28,6 +32,15 @@ import appHeroContentMB from '../../assets/appHeroContentMB.svg';
 <style lang="scss">
     .app-hero {
         padding-top: 7.2rem;
-        
+        .vid-wrap {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            .vid-fill {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
     }
 </style>

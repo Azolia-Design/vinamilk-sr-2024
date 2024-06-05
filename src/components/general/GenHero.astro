@@ -4,12 +4,16 @@ import genHeroImg from '../../assets/genHeroImg.png';
 import genHeroContent from '../../assets/genHeroContent.svg';
 import genHeroImgMB from '../../assets/genHeroImgMB.png';
 import genHeroContentMB from '../../assets/genHeroContentMB.svg';
+import genHeroVid from '/video/chap1.mp4';
 ---
 <section class="gen-hero">
     <div class="container">
         <div class="ex-wrap">
             <div class="ex-img" data-aos="fade-up">
-                <Image src={genHeroImg} alt="" />
+                <Image src={genHeroImg} alt="" style={'opacity: 0'} />
+                <div class="vid-wrap">
+                    <video src={genHeroVid} autoplay muted playsinline class="vid-fill img-dk"></video>
+                </div>
             </div>
             <div class="ex-content" data-aos="fade-up" data-aos-delay="200">
                 <Image src={genHeroContent} alt="" />
@@ -28,6 +32,15 @@ import genHeroContentMB from '../../assets/genHeroContentMB.svg';
 <style lang="scss">
     .gen-hero {
         padding-top: 7.2rem;
-        
+        .vid-wrap {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            .vid-fill {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
     }
 </style>

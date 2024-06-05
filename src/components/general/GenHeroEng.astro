@@ -1,13 +1,21 @@
 ---
 import { Image } from "astro:assets";
-import genHeroImg from '../../assets/genHeroImgEng.png';
+import genHeroImg from '../../assets/genHeroImg.png';
+import genHeroContent from '../../assets/genHeroContentEng.svg';
 import genHeroImgMB from '../../assets/genHeroImgEngMB.png';
+import genHeroVid from '/video/chap1.mp4';
 ---
 <section class="gen-hero">
     <div class="container">
         <div class="ex-wrap">
             <div class="ex-img" data-aos="fade-up">
-                <Image src={genHeroImg} alt="" />
+                <Image src={genHeroImg} alt="" style={'opacity: 0'} />
+                <div class="vid-wrap">
+                    <video src={genHeroVid} autoplay muted playsinline class="vid-fill img-dk"></video>
+                </div>
+            </div>
+            <div class="ex-content" data-aos="fade-up" data-aos-delay="200">
+                <Image src={genHeroContent} alt="" />
             </div>
         </div>
         <div class="ex-wrap ex-mb">
@@ -20,6 +28,15 @@ import genHeroImgMB from '../../assets/genHeroImgEngMB.png';
 <style lang="scss">
     .gen-hero {
         padding-top: 7.2rem;
-        
+        .vid-wrap {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            .vid-fill {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
     }
 </style>

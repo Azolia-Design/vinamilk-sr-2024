@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import keyHeroImg from '../../assets/keyHeroImg.png';
+import keyHeroVid from '/video/chap3.mp4';
 ---
 <section class="key-hero">
     <div class="container grid">
@@ -49,6 +50,7 @@ import keyHeroImg from '../../assets/keyHeroImg.png';
             </div>
         </div>
         <div class="img-wrap" data-aos="fade-up">
+            <video src={keyHeroVid} autoplay muted playsinline class="vid-fill img-dk"></video>
             <Image src={keyHeroImg} alt="" class="img-fill"/>
         </div>
     </div>
@@ -109,11 +111,26 @@ import keyHeroImg from '../../assets/keyHeroImg.png';
             position: absolute;
             inset: 0;
             z-index: 1;
+            .vid-fill {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            img {
+                opacity: 0;
+            }
+
             @media screen and (max-width: 767px) {
                 top: auto;
                 right: 0;
-
+                .vid-fill {
+                    display: none;
+                }
+                img {
+                    opacity: 1;
+                }
             }
+
         }
     }
 </style>
