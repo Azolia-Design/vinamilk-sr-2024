@@ -10,6 +10,7 @@ import ic_in from '../../assets/in.svg';
 import ic_youtube from '../../assets/youtube.svg';
 import ic_tiktok from '../../assets/tiktok.svg';
 import BCT from '../../assets/BCT.png';
+import pdf from '/pdf/RGB-VIE-Vinamilk-SR-2023.pdf';
 
 const {content, lang} = Astro.props;
 ---
@@ -17,7 +18,7 @@ const {content, lang} = Astro.props;
 <footer class="footer">
     <div class="container top">
         <div class="grp grp-main" data-aos="fade-up">
-            <a href="https://www.vinamilk.com.vn/static/uploads/article/1713846678-f9f0dfe94e842338f4829a24fb50fa6508d19ea1bdb61e04c753200b57368d54.pdf" target="_blank" class="btn ft-main-btn">
+            <a href={pdf} target="_blank" class="btn ft-main-btn">
                 <span class="txt txt-16 txt-med">Tải xuống bản PDF</span>
             </a>
             <div class="btn-dl-wrap">

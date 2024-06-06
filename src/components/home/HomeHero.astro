@@ -3,6 +3,7 @@ import { Image } from "astro:assets";
 import homeHeroBg from '../../assets/home-hero-bg.jpg';
 import homeHeroBgMb from '../../assets/mb-home-hero-bg.jpg';
 import homeHeroVid from '/video/home.mp4';
+import pdf from '/pdf/RGB-VIE-Vinamilk-SR-2023.pdf';
 ---
 <section class="home-hero">
     <div class="container">
@@ -14,7 +15,7 @@ import homeHeroVid from '/video/home.mp4';
                 Net Zero 2050
             </div>
             <div class="home-hero-btn-wrap" data-aos="fade-up" data-aos-delay="300">
-                <a href="https://www.vinamilk.com.vn/static/uploads/article/1713846678-f9f0dfe94e842338f4829a24fb50fa6508d19ea1bdb61e04c753200b57368d54.pdf" target="_blank" class="btn home-hero-btn">
+                <a href={pdf} target="_blank" class="btn home-hero-btn">
                     <span class="txt txt-16 txt-med">
                         Báo cáo Phát triển Bền Vững 2023
                     </span>
