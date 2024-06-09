@@ -2,8 +2,8 @@
 import { Image } from "astro:assets";
 import chap1NetImg from '../../assets/chap1NetImgEng.svg?raw';
 import chap1NetImgMB from '../../assets/chap1NetImgEngMB.svg';
-import chap1NetAdd1 from '../../assets/chap1NetAdd1Eng.svg';
-import chap1NetAdd2 from '../../assets/chap1NetAdd2Eng.svg';
+import chap1NetAdd1 from '../../assets/chap1NetAdd1Eng.svg?raw';
+import chap1NetAdd2 from '../../assets/chap1NetAdd2Eng.svg?raw';
 import chap1NetAdd1MB from '../../assets/chap1NetAdd1EngMB.svg';
 import chap1NetAdd2MB from '../../assets/chap1NetAdd2EngMB.svg';
 ---
@@ -14,10 +14,10 @@ import chap1NetAdd2MB from '../../assets/chap1NetAdd2EngMB.svg';
                 <Fragment set:html={chap1NetImg} />
             </div>
             <a href="https://www.vinamilk.com.vn/vi/tin-tuc-phat-trien-ben-vung/2533/tuyen-bo-giai-thich-du-dieu-kien-qes-nha-may-sua-nghe-an" data-aos="fade-up" target="_blank" class="ex-add1">
-                <Image src={chap1NetAdd1} alt="" />
+                <Fragment set:html={chap1NetAdd1} />
             </a>
             <a href="https://www.vinamilk.com.vn/vi/tin-tuc-phat-trien-ben-vung/2532/tuyen-bo-giai-thich-du-dieu-kien-qes-trang-trai-bo-sua-nghe-an" data-aos="fade-up" target="_blank" class="ex-add2">
-                <Image src={chap1NetAdd2} alt="" />
+                <Fragment set:html={chap1NetAdd2} />
             </a>
         </div>
         <div class="ex-wrap ex-mb">
