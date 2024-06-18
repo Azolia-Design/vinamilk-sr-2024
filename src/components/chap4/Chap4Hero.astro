@@ -2,7 +2,7 @@
 import { Image } from "astro:assets";
 import chap4HeroImg from '../../assets/chap4HeroImg.png';
 import chap4HeroContent from '../../assets/chap4HeroContent2.svg?raw';
-import chap4HeroContentMB from '../../assets/chap4HeroContentMB.png';
+import chap4HeroContentMB from '../../assets/chap4HeroContentMB.svg?raw';
 ---
 <section class="chap4-hero">
     <div class="container">
@@ -16,7 +16,7 @@ import chap4HeroContentMB from '../../assets/chap4HeroContentMB.png';
         </div>
         <div class="ex-wrap ex-mb">
             <div class="ex-img" data-aos="fade-up">
-                <Image src={chap4HeroContentMB} alt="" />
+                <Fragment set:html={chap4HeroContentMB} />
             </div>
         </div>
     </div>

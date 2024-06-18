@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import chap3MainImg from '../../assets/chap3MainImgEng.svg?raw';
-import chap3MainContentMB from '../../assets/chap3MainImgEngMB.svg';
+import chap3MainContentMB from '../../assets/chap3MainImgEngMB.svg?raw';
 ---
 <section class="chap3-main">
     <div class="container">
@@ -12,7 +12,7 @@ import chap3MainContentMB from '../../assets/chap3MainImgEngMB.svg';
         </div>
         <div class="ex-wrap ex-mb">
             <div class="ex-img" data-aos="fade-up">
-                <Image src={chap3MainContentMB} alt="" />
+                <Fragment set:html={chap3MainContentMB}/>
             </div>
         </div>
     </div>

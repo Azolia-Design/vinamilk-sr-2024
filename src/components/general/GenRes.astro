@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import genResImgMB from '../../assets/genResImgMB.svg';
+import genResImgMB from '../../assets/genResImgMB.svg?raw';
 import genResContent from '../../assets/genResContent-txt.svg?raw';
 ---
 <section class="gen-res">
@@ -12,7 +12,7 @@ import genResContent from '../../assets/genResContent-txt.svg?raw';
         </div>
         <div class="ex-wrap ex-mb">
             <div class="ex-img" data-aos="fade-up">
-                <Image src={genResImgMB} alt="" />
+                <Fragment set:html={genResImgMB} />
             </div>
         </div>
     </div>
