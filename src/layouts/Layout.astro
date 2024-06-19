@@ -257,6 +257,8 @@ const data = {
         const observer = new IntersectionObserver(([entry]) => {
             if (entry.isIntersecting) {
             // Add the 'visible' class when the element is in view
+			console.log('visible')
+			console.log(element)
             element.classList.add('visible');
             } else {
             // Remove the 'visible' class when the element is out of view
