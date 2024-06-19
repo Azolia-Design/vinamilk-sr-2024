@@ -253,7 +253,11 @@ const data = {
 
 	// Select all elements with the class 'target-element'
     const targetElements = document.querySelectorAll('.anim-el');
-
+	if (isSafari) {
+		targetElements.forEach((el) => {
+			el.classList.add('visible');
+		})
+	}
     // Function to handle visibility change for each element
     const handleVisibilityChange = (element) => {
         const observer = new IntersectionObserver(([entry]) => {
