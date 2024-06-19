@@ -249,6 +249,8 @@ const data = {
     // Iterate over each target element and set up an observer
     counterEls.forEach(handleVisCounter);
 
+	let isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && window['safari'].pushNotification));
+
 	// Select all elements with the class 'target-element'
     const targetElements = document.querySelectorAll('.anim-el');
 
@@ -266,7 +268,7 @@ const data = {
 			
         }, {
             // Options
-            root: document, // Use the viewport as the reference area
+            root: !isSafari ? document : document.body, // Use the viewport as the reference area
             rootMargin: "0px 0px", // Extend the root's bounding box by 10% at the top and bottom
             threshold: 0.1, // Trigger the callback when 10% of the element is visible
         });
