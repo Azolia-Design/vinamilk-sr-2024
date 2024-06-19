@@ -258,16 +258,16 @@ const data = {
             if (entry.isIntersecting) {
             // Add the 'visible' class when the element is in view
 			console.log('visible')
-			console.log(element)
             element.classList.add('visible');
             } else {
             // Remove the 'visible' class when the element is out of view
             element.classList.remove('visible');
             }
+			
         }, {
             // Options
-            root: null, // Use the viewport as the reference area
-            rootMargin: "0% 0%", // Extend the root's bounding box by 10% at the top and bottom
+            root: document, // Use the viewport as the reference area
+            rootMargin: "0px 0px", // Extend the root's bounding box by 10% at the top and bottom
             threshold: 0.1, // Trigger the callback when 10% of the element is visible
         });
 
