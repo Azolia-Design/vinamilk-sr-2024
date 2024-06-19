@@ -257,29 +257,31 @@ const data = {
 		targetElements.forEach((el) => {
 			el.classList.add('visible');
 		})
+	} else {
+		// Function to handle visibility change for each element
+		const handleVisibilityChange = (element) => {
+			const observer = new IntersectionObserver(([entry]) => {
+				if (entry.isIntersecting) {
+				// Add the 'visible' class when the element is in view
+				console.log('visible')
+				element.classList.add('visible');
+				} else {
+				// Remove the 'visible' class when the element is out of view
+				element.classList.remove('visible');
+				}
+				
+			}, {
+				// Options
+				root: !isSafari ? document : document.body, // Use the viewport as the reference area
+				rootMargin: "0px 0px", // Extend the root's bounding box by 10% at the top and bottom
+				threshold: 0.1, // Trigger the callback when 10% of the element is visible
+			});
+
+			observer.observe(element);
+		};
+
+		// Iterate over each target element and set up an observer
+		targetElements.forEach(handleVisibilityChange);
 	}
-    // Function to handle visibility change for each element
-    const handleVisibilityChange = (element) => {
-        const observer = new IntersectionObserver(([entry]) => {
-            if (entry.isIntersecting) {
-            // Add the 'visible' class when the element is in view
-			console.log('visible')
-            element.classList.add('visible');
-            } else {
-            // Remove the 'visible' class when the element is out of view
-            element.classList.remove('visible');
-            }
-			
-        }, {
-            // Options
-            root: !isSafari ? document : document.body, // Use the viewport as the reference area
-            rootMargin: "0px 0px", // Extend the root's bounding box by 10% at the top and bottom
-            threshold: 0.1, // Trigger the callback when 10% of the element is visible
-        });
-
-        observer.observe(element);
-    };
-
-    // Iterate over each target element and set up an observer
-    targetElements.forEach(handleVisibilityChange);
+    
 </script>
