@@ -22,6 +22,9 @@ import appHeroVid from '/video/chap2.mp4';
         <div class="ex-wrap ex-mb">
             <div class="ex-img" data-aos="fade-up">
                 <Image src={appHeroImgMB} alt="" />
+                <div class="vid-wrap vid-mb">
+                    <video src={appHeroVid} autoplay muted playsinline class="vid-fill img-dk"></video>
+                </div>
             </div>
         </div>
     </div>
@@ -37,6 +40,15 @@ import appHeroVid from '/video/chap2.mp4';
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
+            }
+        }
+        .ex-mb {
+            .vid-mb {
+                margin-bottom: 6%;
+                .vid-fill {
+                    object-fit: contain;
+                    object-position: bottom;
+                }
             }
         }
     }
